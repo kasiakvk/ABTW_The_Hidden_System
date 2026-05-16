@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: notebook_entries_guid, type: 3}
+  m_Name: NotebookEntries
+  # Master Notebook Entries Database — Book 1 starter entries
+  entries:
+    - entryId: ENTRY_001
+      patternName: Shadow Delay
+      status: Unrecorded
+      location: East Corridor
+      observations:
+        - "movement mismatch (x3)"
+        - "delay ~0.4s"
+        - "East Corridor, near window"
+      lumiNote: "It's repeating. The interval is consistent."
+      nelaNote: "Don't write it yet. Something else is coming."
+      echoNote: "This is not the original pattern. A trace of something recorded too early."
+      isEcho: false
+      canRecord: true
+      canWait: true
+      canDeepRecord: false
+      appearsInBook: 1
+
+    - entryId: ENTRY_002
+      patternName: Echo Corridor
+      status: Unrecorded
+      location: West Corridor
+      observations:
+        - "sound delay ~0.3s"
+        - "rhythm mismatch detected"
+        - "West Corridor, near archive door"
+      lumiNote: "The echo rhythm matches a walking pattern from approximately 3 hours ago."
+      nelaNote: "Listen. Don't walk."
+      echoNote: "The sound that kept repeating."
+      isEcho: false
+      canRecord: true
+      canWait: true
+      canDeepRecord: false
+      appearsInBook: 1
+
+    - entryId: ENTRY_003
+      patternName: Incomplete Circle
+      status: Unrecorded
+      location: Observatory
+      observations:
+        - "circle drawn on wall — missing one segment"
+        - "gap position changes each visit"
+        - "visible only when all three present"
+      lumiNote: "The gap rotates by 15 degrees each observation."
+      nelaNote: "It's waiting for the right moment to close."
+      echoNote: "The circle fragment. It never completed."
+      isEcho: false
+      canRecord: false
+      canWait: true
+      canDeepRecord: true
+      appearsInBook: 1
+      trioRequired: true

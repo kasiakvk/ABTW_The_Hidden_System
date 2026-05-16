@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: UI_PerceptionRing
+  m_IsActive: 0
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+
+# ── Perception Ring Prefab ────────────────────────────────────────────────
+# A very subtle screen-edge vignette that appears when Perception Mode
+# is active. It is not a UI element — it is an atmospheric signal.
+#
+# Visual:
+#   - Soft radial gradient from screen edges inward
+#   - Color: cool blue-white (#AABBFF) at 15% opacity
+#   - Pulse: gentle, slow (0.8 Hz), amplitude 0.05 opacity
+#   - Appears: when PerceptionSystem.IsActive == true
+#   - Disappears: when player moves or Perception Mode ends
+#
+# Implementation:
+#   - Full-screen RawImage with radial gradient texture
+#   - Shader: additive blend, no depth write
+#   - Animated via CanvasGroup.alpha + custom pulse coroutine
+#
+# Design Rule:
+#   This ring must be barely visible.
+#   It signals awareness, not alarm.
+#   If the player notices it consciously, it is too strong.
+#
+# Components:
+#   - RectTransform (stretch to full screen)
+#   - RawImage (perception_ring_texture.png)
+#   - CanvasGroup (alpha controlled by HUDController)
+#   - PerceptionRingAnimator.cs (pulse + fade in/out)

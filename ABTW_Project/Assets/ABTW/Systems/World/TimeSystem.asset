@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: time_system_guid, type: 3}
+  m_Name: TimeSystem
+  # Time of Day Configuration
+  startTimeOfDay: Afternoon
+  realSecondsPerGameHour: 120.0
+  timeProgresses: false
+  # Anomaly multipliers per time of day
+  morningAnomalyMultiplier: 0.6
+  afternoonAnomalyMultiplier: 1.0
+  sunsetAnomalyMultiplier: 1.3
+  nightAnomalyMultiplier: 1.8
+  rainAnomalyMultiplier: 1.4
+  # Lighting presets per time
+  morningLightColor: "#FFF5E0"
+  afternoonLightColor: "#FFFAF0"
+  sunsetLightColor: "#FFD580"
+  nightLightColor: "#1A2040"
+  rainLightColor: "#8899AA"

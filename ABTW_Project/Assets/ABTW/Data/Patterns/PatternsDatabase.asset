@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: patterns_db_guid, type: 3}
+  m_Name: PatternsDatabase
+  # Master Patterns Database — all discoverable patterns across all books
+  patterns:
+    - id: PAT_001
+      name: Shadow Delay
+      category: Layer1_Anomaly
+      location: East Corridor
+      roomId: ROOM_CORRIDOR_EAST
+      appearsInBook: 1
+      trioRequired: false
+      hiddenLayer: false
+      meaning: "Time is not fixed. Perception creates delay."
+      visual: "Shadow moves 0.4s after its source"
+      glitchColor: "#6666CC"
+      activationColor: "#FFD700"
+
+    - id: PAT_002
+      name: Incomplete Circle
+      category: Layer2_Symbol
+      location: Observatory
+      roomId: ROOM_OBSERVATORY_MAIN
+      appearsInBook: 1
+      trioRequired: true
+      hiddenLayer: true
+      meaning: "Understanding is never complete. The gap is intentional."
+      visual: "Circle drawn on wall — always missing one segment"
+      glitchColor: "#4488FF"
+      activationColor: "#FFFACD"
+
+    - id: PAT_003
+      name: Reflected Word
+      category: Layer1_Anomaly
+      location: Library Archive
+      roomId: ROOM_LIBRARY_MAIN
+      appearsInBook: 2
+      trioRequired: false
+      hiddenLayer: false
+      meaning: "Knowledge reflects differently depending on who reads it."
+      visual: "Text in reflection shows different words than original"
+      glitchColor: "#8866AA"
+      activationColor: "#E8D5FF"
+
+    - id: PAT_004
+      name: Echo Corridor
+      category: Layer1_Anomaly
+      location: West Corridor
+      roomId: ROOM_CORRIDOR_WEST
+      appearsInBook: 1
+      trioRequired: false
+      hiddenLayer: false
+      meaning: "Sound in the Academy carries memory."
+      visual: "Footsteps echo with slight delay and different rhythm"
+      glitchColor: "#AAAACC"
+      activationColor: "#DDDDFF"
+
+    - id: PAT_005
+      name: Memory Trace
+      category: Layer2_Symbol
+      location: Dormitory Corridor
+      roomId: ROOM_DORMITORY_HALL
+      appearsInBook: 2
+      trioRequired: false
+      hiddenLayer: false
+      meaning: "Past events leave visible marks on the present."
+      visual: "Faint outline of a figure that no longer stands there"
+      glitchColor: "#CCAAAA"
+      activationColor: "#FFE8E8"
+
+    - id: PAT_006
+      name: Convergence Point
+      category: Layer3_Hidden
+      location: Central Corridor Junction
+      roomId: ROOM_CORRIDOR_JUNCTION
+      appearsInBook: 3
+      trioRequired: true
+      hiddenLayer: true
+      meaning: "All paths in the Academy lead to the same understanding."
+      visual: "Invisible point where all corridor sight lines intersect"
+      glitchColor: "#AACCFF"
+      activationColor: "#FFFFFF"

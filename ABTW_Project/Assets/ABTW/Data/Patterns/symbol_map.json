@@ -1,0 +1,197 @@
+{
+  "version": "1.0",
+  "canon_lock": true,
+  "description": "ABTW Symbol Map — complete catalogue of all symbols in the Academy system",
+  "golden_rule": "Symbols never fully explain themselves. They respond to perception.",
+
+  "symbol_states": [
+    "Hidden",
+    "Glitch",
+    "Forming",
+    "Activation",
+    "Resolved",
+    "Echo"
+  ],
+
+  "activation_conditions": {
+    "glitch_trigger": "Awareness >= 0.3",
+    "forming_trigger": "Clarity >= 0.5",
+    "activation_trigger": "Connection >= 0.7 AND Trio synchronized",
+    "echo_trigger": "Recorded before Activation state"
+  },
+
+  "symbols": [
+    {
+      "id": "SYM_001",
+      "name": "The Delayed Shadow",
+      "category": "Layer1_Anomaly",
+      "location": "East Corridor",
+      "room_id": "ROOM_CORRIDOR_EAST",
+      "meaning": "Time is not fixed. Perception creates delay.",
+      "visual": "Shadow moves 0.4s after its source",
+      "color_glitch": "#6666CC",
+      "color_activation": "#FFD700",
+      "appears_in_book": 1,
+      "trio_required": false,
+      "hidden_layer": false,
+      "notebook_entry": "PATTERN: SHADOW DELAY\nObserved: movement mismatch (×3)\nDelay: ~0.4s\nLocation: East Corridor",
+      "lumi_note": "It's repeating. The interval is consistent.",
+      "nela_note": "Don't write it yet. Something else is coming.",
+      "echo_note": "This is not the original pattern. A trace of something recorded too early."
+    },
+    {
+      "id": "SYM_002",
+      "name": "The Incomplete Circle",
+      "category": "Layer2_Symbol",
+      "location": "Observatory",
+      "room_id": "ROOM_OBSERVATORY_MAIN",
+      "meaning": "Understanding is never complete. The gap is intentional.",
+      "visual": "Circle drawn on wall — always missing one segment",
+      "color_glitch": "#4488FF",
+      "color_activation": "#FFFACD",
+      "appears_in_book": 1,
+      "trio_required": true,
+      "hidden_layer": true,
+      "notebook_entry": "SYMBOL: INCOMPLETE CIRCLE\nLocation: Observatory\nStatus: Forming\nNote: The missing segment changes position each visit.",
+      "lumi_note": "The gap rotates by 15 degrees each observation.",
+      "nela_note": "It's waiting for the right moment to close.",
+      "echo_note": "The circle fragment. It never completed."
+    },
+    {
+      "id": "SYM_003",
+      "name": "The Reflected Word",
+      "category": "Layer1_Anomaly",
+      "location": "Library Archive",
+      "room_id": "ROOM_LIBRARY_MAIN",
+      "meaning": "Knowledge reflects differently depending on who reads it.",
+      "visual": "Text in reflection shows different words than original",
+      "color_glitch": "#8866AA",
+      "color_activation": "#E8D5FF",
+      "appears_in_book": 2,
+      "trio_required": false,
+      "hidden_layer": false,
+      "notebook_entry": "PATTERN: REFLECTED WORD\nObserved: text mismatch in mirror surface\nOriginal: unknown\nReflection: unknown\nNote: Changes with each reading.",
+      "lumi_note": "The reflection shows a different language. Or the same language, differently arranged.",
+      "nela_note": "Read it when you're not trying to.",
+      "echo_note": "The word that was almost understood."
+    },
+    {
+      "id": "SYM_004",
+      "name": "The Convergence Point",
+      "category": "Layer3_Hidden",
+      "location": "Central Corridor Junction",
+      "room_id": "ROOM_CORRIDOR_JUNCTION",
+      "meaning": "All paths in the Academy lead to the same understanding.",
+      "visual": "Invisible point where all corridor sight lines intersect",
+      "color_glitch": "#AACCFF",
+      "color_activation": "#FFFFFF",
+      "appears_in_book": 3,
+      "trio_required": true,
+      "hidden_layer": true,
+      "notebook_entry": "SYMBOL: CONVERGENCE POINT\nLocation: Junction\nStatus: Hidden\nNote: Only visible when all three are present.",
+      "lumi_note": "Geometrically, this point shouldn't exist in this architecture.",
+      "nela_note": "Stand here. All three of us. Now.",
+      "echo_note": "The point that was almost reached."
+    },
+    {
+      "id": "SYM_005",
+      "name": "The Memory Trace",
+      "category": "Layer2_Symbol",
+      "location": "Dormitory Corridor",
+      "room_id": "ROOM_DORMITORY_HALL",
+      "meaning": "Past events leave visible marks on the present.",
+      "visual": "Faint outline of a figure that no longer stands there",
+      "color_glitch": "#CCAAAA",
+      "color_activation": "#FFE8E8",
+      "appears_in_book": 2,
+      "trio_required": false,
+      "hidden_layer": false,
+      "notebook_entry": "PATTERN: MEMORY TRACE\nObserved: residual figure outline\nLocation: Dormitory Hall\nNote: Appears only at night.",
+      "lumi_note": "The outline matches no current student's proportions.",
+      "nela_note": "Someone stood here for a very long time.",
+      "echo_note": "The trace of a trace."
+    },
+    {
+      "id": "SYM_006",
+      "name": "The Garden Spiral",
+      "category": "Layer2_Symbol",
+      "location": "Academy Gardens",
+      "room_id": "ROOM_GARDEN_MAIN",
+      "meaning": "Nature in the Academy grows according to perception, not physics.",
+      "visual": "Plant growth follows a spiral that mirrors the symbol system",
+      "color_glitch": "#88CC88",
+      "color_activation": "#CCFFCC",
+      "appears_in_book": 3,
+      "trio_required": false,
+      "hidden_layer": false,
+      "notebook_entry": "SYMBOL: GARDEN SPIRAL\nLocation: Main Garden\nStatus: Forming\nNote: The spiral expands by one rotation each season.",
+      "lumi_note": "The growth rate is mathematically precise. Not natural.",
+      "nela_note": "Touch the center. Gently.",
+      "echo_note": "The spiral that stopped growing."
+    },
+    {
+      "id": "SYM_007",
+      "name": "The Observatory Star Map",
+      "category": "Layer3_Hidden",
+      "location": "Main Observatory",
+      "room_id": "ROOM_OBSERVATORY_MAIN",
+      "meaning": "The Academy's position in the world is not fixed.",
+      "visual": "Star map on ceiling that doesn't match any known constellation",
+      "color_glitch": "#334466",
+      "color_activation": "#AABBFF",
+      "appears_in_book": 4,
+      "trio_required": true,
+      "hidden_layer": true,
+      "notebook_entry": "SYMBOL: STAR MAP\nLocation: Observatory Ceiling\nStatus: Hidden\nNote: Stars shift position when observed directly.",
+      "lumi_note": "These stars don't exist in any astronomical catalogue.",
+      "nela_note": "They're not stars. They're positions.",
+      "echo_note": "The map that was almost read."
+    },
+    {
+      "id": "SYM_008",
+      "name": "The Echo Corridor",
+      "category": "Layer1_Anomaly",
+      "location": "West Corridor",
+      "room_id": "ROOM_CORRIDOR_WEST",
+      "meaning": "Sound in the Academy carries memory.",
+      "visual": "Footsteps echo with a slight delay and different rhythm",
+      "color_glitch": "#AAAACC",
+      "color_activation": "#DDDDFF",
+      "appears_in_book": 1,
+      "trio_required": false,
+      "hidden_layer": false,
+      "notebook_entry": "PATTERN: ECHO CORRIDOR\nObserved: sound delay ~0.3s\nRhythm mismatch detected\nLocation: West Corridor",
+      "lumi_note": "The echo rhythm matches a walking pattern from approximately 3 hours ago.",
+      "nela_note": "Listen. Don't walk.",
+      "echo_note": "The sound that kept repeating."
+    }
+  ],
+
+  "symbol_categories": {
+    "Layer1_Anomaly": {
+      "description": "Surface-level glitches. Detectable without Trio.",
+      "visibility": "Awareness >= 0.3",
+      "color_theme": "Cool blue"
+    },
+    "Layer2_Symbol": {
+      "description": "Forming patterns. Require Clarity to understand.",
+      "visibility": "Clarity >= 0.5",
+      "color_theme": "Soft blue-white"
+    },
+    "Layer3_Hidden": {
+      "description": "Deep system symbols. Require full Trio synchronization.",
+      "visibility": "Trio synchronized + Connection >= 0.7",
+      "color_theme": "Warm gold to white"
+    }
+  },
+
+  "symbol_evolution_rules": [
+    "Symbols never fully explain themselves",
+    "Recording too early creates Echo — incomplete fragment",
+    "Waiting allows deeper layers to emerge",
+    "Trio activation reveals Layer 3 symbols",
+    "Symbols in the same room can form constellations",
+    "Each book introduces new symbol categories",
+    "Resolved symbols leave permanent marks in the notebook"
+  ]
+}

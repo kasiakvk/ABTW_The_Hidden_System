@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: spawn_table_guid, type: 3}
+  m_Name: SpawnTable
+  # Anomaly Spawn Table — Chapter 1
+  # Controls which anomalies appear, where, and when
+  entries:
+    - anomalyType: ShadowDelay
+      roomId: ROOM_CORRIDOR_EAST
+      spawnWeight: 1.0
+      minAwarenessRequired: 0.0
+      appearsInBook: 1
+      isRequired: true
+      spawnOnStart: true
+      position: "0, 0, 5"
+
+    - anomalyType: LightInstability
+      roomId: ROOM_CORRIDOR_EAST
+      spawnWeight: 0.6
+      minAwarenessRequired: 0.2
+      appearsInBook: 1
+      isRequired: false
+      spawnOnStart: false
+      triggerAfterSeconds: 45.0
+
+    - anomalyType: SoundEcho
+      roomId: ROOM_CORRIDOR_WEST
+      spawnWeight: 0.5
+      minAwarenessRequired: 0.1
+      appearsInBook: 1
+      isRequired: false
+      spawnOnStart: false
+      triggerAfterSeconds: 60.0
+
+    - anomalyType: SymbolFragment
+      roomId: ROOM_CORRIDOR_EAST
+      spawnWeight: 0.3
+      minAwarenessRequired: 0.3
+      appearsInBook: 1
+      isRequired: false
+      spawnOnStart: false
+      requiresTrioActive: true
+
+  maxSimultaneousAnomalies: 2
+  respawnCooldownSeconds: 20.0

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: UI_HUD
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &114000001
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: hud_controller_guid, type: 3}
+  m_Name: HUDController
+
+  # HUD is minimal — never intrusive
+  # Most elements are hidden by default, appear only when relevant
+
+  # Awareness indicator (top-left, very subtle)
+  awarenessIndicator: {fileID: 0}
+  awarenessShowThreshold: 0.1     # only show when awareness > 0.1
+
+  # Notebook hint (bottom-center, appears briefly)
+  notebookHint: {fileID: 0}
+  notebookHintDuration: 3.0
+  notebookHintKey: "Tab"
+
+  # Perception ring (around screen edge, very subtle)
+  perceptionRing: {fileID: 0}
+  perceptionRingOpacity: 0.15
+
+  # Trio indicator (top-right, only during Trio activation)
+  trioIndicator: {fileID: 0}
+
+  # Echo notification (bottom-right, brief)
+  echoNotification: {fileID: 0}
+  echoNotificationDuration: 4.0
+
+  # Memory Walk overlay (full screen, desaturated)
+  memoryWalkOverlay: {fileID: 0}
+
+# ── HUD Design Rules ──────────────────────────────────────────────────────
+# Layout:
+#   Canvas (Screen Space — Overlay)
+#   ├── TopLeft
+#   │   └── AwarenessIndicator (tiny dot + subtle pulse, hidden by default)
+#   ├── TopRight
+#   │   └── TrioIndicator (3 small dots — Astra/Lumi/Nela, hidden by default)
+#   ├── BottomCenter
+#   │   └── NotebookHint (icon + "Tab" key, fades after 3s)
+#   ├── BottomRight
+#   │   └── EchoNotification (small text, fades after 4s)
+#   └── FullScreen
+#       ├── PerceptionRing (edge vignette, 15% opacity during Perception Mode)
+#       └── MemoryWalkOverlay (desaturation + blur layer)
+#
+# CRITICAL DESIGN RULE:
+#   The HUD must feel like it barely exists.
+#   No health bars. No quest markers. No minimap.
+#   The world IS the interface.
+#   UI appears only when the player needs it, then disappears.

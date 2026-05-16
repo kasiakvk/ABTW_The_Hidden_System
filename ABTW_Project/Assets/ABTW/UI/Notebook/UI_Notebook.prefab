@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: UI_Notebook
+  m_IsActive: 0
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &114000001
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: notebook_ui_guid, type: 3}
+  m_Name: NotebookUI
+
+  # Tab references (assigned in Inspector)
+  tabPatterns: {fileID: 0}
+  tabSymbols: {fileID: 0}
+  tabConnections: {fileID: 0}
+  tabMemory: {fileID: 0}
+
+  # Content panel references
+  patternNameText: {fileID: 0}
+  statusText: {fileID: 0}
+  observationsText: {fileID: 0}
+  lumiNoteText: {fileID: 0}
+  nelaNoteText: {fileID: 0}
+
+  # Button references
+  recordButton: {fileID: 0}
+  waitButton: {fileID: 0}
+  revisitButton: {fileID: 0}
+
+  # Animation
+  openAnimationDuration: 0.3
+  closeAnimationDuration: 0.2
+  pageFlipDuration: 0.15
+
+  # State
+  isOpen: false
+  currentTab: Patterns
+  currentPatternId: ""
+
+# ── UI Layout Description ─────────────────────────────────────────────────
+# Canvas (Screen Space — Overlay)
+# └── NotebookPanel (RectTransform, anchored center)
+#     ├── BackgroundImage (parchment texture, soft edges)
+#     ├── Header
+#     │   └── TitleText ("ASTRA'S NOTEBOOK")
+#     ├── TabBar (HorizontalLayoutGroup)
+#     │   ├── Tab_Patterns
+#     │   ├── Tab_Symbols
+#     │   ├── Tab_Connections
+#     │   └── Tab_Memory
+#     ├── ContentPanel
+#     │   ├── PatternName (TextMeshPro)
+#     │   ├── StatusIndicator (dot + text)
+#     │   ├── ObservationsList (VerticalLayoutGroup)
+#     │   ├── LumiNote (italic, smaller font)
+#     │   └── NelaNote (italic, smaller font)
+#     └── ActionButtons (HorizontalLayoutGroup)
+#         ├── RecordButton  ("RECORD")
+#         └── WaitButton    ("WAIT")
+#
+# Design Rules:
+#   - Looks like a real notebook, not a game HUD
+#   - Pages have subtle movement (breathing animation)
+#   - Font: handwritten-style for notes, clean for labels
+#   - Colors: warm cream background, dark ink text
+#   - Status dot: grey=Unrecorded, gold=Recorded, blue=Echo
+#   - RECORD button: warm gold border
+#   - WAIT button: cool blue border
+#   - Both buttons: no fill, just border + text (minimal)

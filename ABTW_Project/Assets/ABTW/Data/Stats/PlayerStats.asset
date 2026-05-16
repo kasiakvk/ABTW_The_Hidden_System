@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: player_stats_asset_guid, type: 3}
+  m_Name: PlayerStats
+  # Player Stats — Default Starting Values (Book 1, Chapter 1)
+
+  # Core perception stats (0.0 — 1.0)
+  awareness: 0.1
+  clarity: 0.0
+  connection: 0.0
+  timing: 0.0
+  stability: 0.5
+
+  # Progression
+  academyRank: 1
+  totalExp: 0
+
+  # Rank thresholds (EXP required)
+  rankThresholds:
+    - rank: 1   name: Observer          expRequired: 0
+    - rank: 2   name: Noticer           expRequired: 100
+    - rank: 3   name: Pattern Seeker    expRequired: 300
+    - rank: 4   name: Interpreter       expRequired: 600
+    - rank: 5   name: Aligner           expRequired: 1000
+    - rank: 6   name: System Aware      expRequired: 1500
+    - rank: 7   name: Influence Initiate expRequired: 2200
+    - rank: 8   name: Reality Reader    expRequired: 3000
+    - rank: 9   name: System Shifter    expRequired: 4000
+    - rank: 10  name: Beyond Observer   expRequired: 5500
+
+  # Stat gain rates
+  awarenessGainPerGlitch: 0.10
+  clarityGainOnRecord: 0.10
+  clarityGainOnDeepRecord: 0.25
+  connectionGainOnTrio: 0.15
+  timingGainOnWait: 0.05
+  stabilityGainOnMemoryWalk: 0.05
+  stabilityDecayOnEcho: 0.02
+
+  # Stat caps
+  maxAwareness: 1.0
+  maxClarity: 1.0
+  maxConnection: 1.0
+  maxTiming: 1.0
+  maxStability: 1.0

@@ -1,0 +1,43 @@
+{
+  "saveVersion": "2.0",
+  "saveId": "NEW_GAME",
+  "savedAt": "2024-01-01T00:00:00Z",
+  "chapterProgress": "Book1_Chapter1",
+  "totalPlaytimeSeconds": 0,
+
+  "astra": {
+    "awareness": 0.1,
+    "clarity": 0.0,
+    "connection": 0.0,
+    "timing": 0.0,
+    "stability": 0.5,
+    "academyRank": 1,
+    "totalExp": 0,
+    "currentRoom": "ROOM_CORRIDOR_EAST",
+    "position": { "x": 0.0, "y": 0.0, "z": 0.0 }
+  },
+
+  "trio": {
+    "synchronizationLevel": 0.0,
+    "totalActivations": 0,
+    "activationRoomIds": [],
+    "lumiUnlocked": false,
+    "nelaUnlocked": false
+  },
+
+  "world": {
+    "currentSeason": "Autumn",
+    "currentTimeOfDay": "Afternoon",
+    "currentWeather": "Clear",
+    "dayCount": 1,
+    "worldPerceptionLevel": 0.0,
+    "hiddenSystemPartiallyRevealed": false,
+    "globalEventsTriggered": []
+  },
+
+  "symbols": [],
+  "notebookEntries": [],
+  "rooms": [],
+  "echoes": [],
+  "decisionsLog": []
+}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: game_config_guid, type: 3}
+  m_Name: GameConfig
+  # ABTW Master Game Configuration
+  # This file is loaded at runtime from Resources/ — always present in build.
+
+  # ── Game Identity ──────────────────────────────────────────────────────────
+  gameTitle: "Academy Beyond This World"
+  subtitle: "The Hidden System"
+  version: "0.1.0-prototype"
+  buildTarget: Windows
+
+  # ── First Scene ────────────────────────────────────────────────────────────
+  firstScene: "Levels/Chapter01/EastCorridor"
+  mainMenuScene: "Levels/MainMenu"
+  prototypeScene: "Levels/Test/Prototype"
+
+  # ── Core Gameplay ──────────────────────────────────────────────────────────
+  perceptionObserveTime: 2.0          # seconds player must stand still to enter Perception Mode
+  perceptionSlowMotionScale: 0.6      # Time.timeScale during Perception Mode
+  perceptionDesaturation: 0.15        # desaturation amount during Perception Mode
+
+  notebookOpenKey: "Tab"
+  memoryWalkKey: "M"
+  pauseKey: "Escape"
+
+  # ── Progression ────────────────────────────────────────────────────────────
+  startingAwareness: 0.0
+  startingClarity: 0.0
+  startingConnection: 0.0
+  startingTiming: 0.0
+  startingStability: 1.0
+
+  maxStatValue: 1.0
+  expToFirstRank: 50
+  expPerRankMultiplier: 1.5
+
+  # ── Anomaly System ─────────────────────────────────────────────────────────
+  anomalyDetectionRadius: 8.0
+  anomalyGlitchBaseDelay: 0.4
+  anomalyEchoSpawnDelay: 30.0
+  anomalyMaxActiveCount: 3
+  trioActivationWaitTime: 3.0         # seconds without input to trigger Trio
+
+  # ── Echo System ────────────────────────────────────────────────────────────
+  echoIntensityMultiplier: 0.4        # echo is always weaker than original
+  echoMaxActive: 2
+  echoLifetime: 60.0                  # seconds before echo fades
+
+  # ── Memory Walk ────────────────────────────────────────────────────────────
+  memoryWalkTimeScale: 0.5
+  memoryWalkBlurAmount: 0.4
+  memoryWalkDesaturation: 0.6
+  memoryWalkDuration: 15.0            # max seconds in memory walk
+
+  # ── Save System ────────────────────────────────────────────────────────────
+  autoSaveEnabled: true
+  autoSaveIntervalSeconds: 120
+  saveSlotCount: 3
+  saveFileName: "abtw_save"
+
+  # ── Audio ──────────────────────────────────────────────────────────────────
+  masterVolume: 1.0
+  musicVolume: 0.7
+  ambientVolume: 0.85
+  sfxVolume: 0.9
+  uiVolume: 0.8
+
+  # ── Visual ─────────────────────────────────────────────────────────────────
+  targetFrameRate: 60
+  vsyncEnabled: true
+  defaultResolution: [1920, 1080]
+  defaultFullscreen: true
+  shadowQuality: Medium
+  antiAliasing: 2
+
+  # ── World Rules (canon) ────────────────────────────────────────────────────
+  # These mirror the World Bible — do not change without canon review
+  worldRespondsToPerception: true
+  worldNeverFullyRevealsItself: true
+  noSpectacleEffects: true
+  anomaliesAreSubtle: true
+  playerNeverPunished: true

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: Lumi
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &114000001
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: lumi_companion_guid, type: 3}
+  m_Name: LumiCompanion
+
+  # Lumi — seeks answers through logic, data and structure
+  # She analyzes. She records. She finds patterns.
+
+  followDistance: 1.2
+  followSmoothTime: 0.2
+  analysisDelay: 1.5           # seconds after anomaly detected before Lumi speaks
+  notebookAutoDrawDelay: 2.0   # seconds before notebook starts drawing itself (Trio)
+
+  # Dialogue lines (Book 1 — East Corridor)
+  glitchDetectedLine: "It's repeating."
+  patternFoundLine: "The interval is consistent."
+  trioReadyLine: "I have enough data."
+  recordedLine: "Pattern logged."
+  waitChosenLine: "Interesting. Let's observe further."
+  echoDetectedLine: "This is a fragment. The original was different."
+
+--- !u!114 &114000002
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: lumi_analyzer_guid, type: 3}
+  m_Name: LumiAnalyzer
+
+  # Analysis thresholds
+  patternConfidenceThreshold: 0.6
+  analysisSpeed: 1.0
+  maxConcurrentAnalyses: 2
+
+--- !u!136 &136000001
+CapsuleCollider:
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.85, z: 0}
+
+# ── Lumi Character Notes ──────────────────────────────────────────────────
+# Lumi does not run ahead. She walks beside Astra, slightly behind.
+# When an anomaly is detected, she stops and observes before speaking.
+# Her notebook appears in her hands during analysis sequences.
+# Voice: calm, precise, never alarmed.
+# She never says "I don't know" — she says "I need more data."
+# Canon rule: Lumi grows through understanding, not visuals.

@@ -1,0 +1,72 @@
+# ===========================
+# ABTW Unity Project .gitignore
+# ===========================
+
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Unity asset meta files (keep these!)
+# *.meta  <-- DO NOT ignore .meta files
+
+# Unity crash reports
+sysinfo.txt
+crashlytics-build.properties
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Build output
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Logs
+*.log
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Backup files
+*.bak
+*.orig
+*.tmp
+
+# Node (if any tooling)
+node_modules/
+npm-debug.log
+
+# Python (if any tooling)
+__pycache__/
+*.pyc
+*.pyo
+
+# ZIP exports (don't commit builds)
+ABTW_Unity_Prototype*.zip

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: memory_config_guid, type: 3}
+  m_Name: MemoryConfig
+  # Memory Walk System Configuration
+  activationKey: M
+  timeScaleInMemory: 0.5
+  desaturationInMemory: 0.7
+  blurAmountInMemory: 0.4
+  memoryFogDensity: 0.025
+  memoryFogColor: "#8899AA"
+  inputDisabledInMemory: true
+  canInteractInMemory: false
+  stabilityGainOnRevisit: 0.05
+  memoryDurationSeconds: 20.0
+  exitKey: Escape
+  uiText: "Memory Reconstruction — This is not the original moment."

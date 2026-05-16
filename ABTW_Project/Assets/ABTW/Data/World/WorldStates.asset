@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: world_states_guid, type: 3}
+  m_Name: WorldStates
+  # World State Definitions — all possible Academy states
+
+  rooms:
+    - roomId: ROOM_CORRIDOR_EAST
+      displayName: East Corridor
+      emotionalTone: Observation
+      pacingFunction: Transition
+      defaultLighting: Afternoon
+      defaultFog: Subtle
+      anomalySlots: 2
+      hiddenLayerAvailable: false
+      trioActivationPossible: false
+
+    - roomId: ROOM_CORRIDOR_WEST
+      displayName: West Corridor
+      emotionalTone: Memory
+      pacingFunction: Reflection
+      defaultLighting: Afternoon
+      defaultFog: Atmospheric
+      anomalySlots: 1
+      hiddenLayerAvailable: false
+      trioActivationPossible: false
+
+    - roomId: ROOM_CORRIDOR_JUNCTION
+      displayName: Central Junction
+      emotionalTone: Convergence
+      pacingFunction: Pause
+      defaultLighting: Sunset
+      defaultFog: Subtle
+      anomalySlots: 3
+      hiddenLayerAvailable: true
+      trioActivationPossible: true
+
+    - roomId: ROOM_OBSERVATORY_MAIN
+      displayName: Main Observatory
+      emotionalTone: Wonder
+      pacingFunction: Expansion
+      defaultLighting: Night
+      defaultFog: Clear
+      anomalySlots: 2
+      hiddenLayerAvailable: true
+      trioActivationPossible: true
+
+    - roomId: ROOM_LIBRARY_MAIN
+      displayName: Library Archive
+      emotionalTone: Hidden Truth
+      pacingFunction: Discovery
+      defaultLighting: Afternoon
+      defaultFog: Atmospheric
+      anomalySlots: 2
+      hiddenLayerAvailable: true
+      trioActivationPossible: false
+
+    - roomId: ROOM_DORMITORY_HALL
+      displayName: Dormitory Hall
+      emotionalTone: Memory
+      pacingFunction: Rest
+      defaultLighting: Night
+      defaultFog: Subtle
+      anomalySlots: 1
+      hiddenLayerAvailable: false
+      trioActivationPossible: false
+
+    - roomId: ROOM_GARDEN_MAIN
+      displayName: Academy Gardens
+      emotionalTone: Reflection
+      pacingFunction: Breathing
+      defaultLighting: Morning
+      defaultFog: Clear
+      anomalySlots: 1
+      hiddenLayerAvailable: false
+      trioActivationPossible: false
+
+  # Global world state flags
+  globalFlags:
+    - HIDDEN_SYSTEM_INTRODUCED: false
+    - FIRST_GLITCH_SEEN: false
+    - NOTEBOOK_OPENED: false
+    - FIRST_RECORD_MADE: false
+    - FIRST_WAIT_CHOSEN: false
+    - TRIO_FIRST_ACTIVATION: false
+    - ECHO_FIRST_ENCOUNTERED: false
+    - MEMORY_WALK_FIRST_USE: false

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: notebook_entry_guid, type: 3}
+  m_Name: NotebookEntry_ShadowDelay
+  # Default Entry — Shadow Delay Pattern (Book 1, Level 1)
+  entryId: ENTRY_001
+  patternName: Shadow Delay
+  status: Unrecorded
+  location: East Corridor
+  observations:
+    - movement mismatch (x3)
+    - delay ~0.4s
+    - East Corridor, near window
+  lumiNote: "It's repeating. The interval is consistent."
+  nelaNote: "Don't write it yet. Something else is coming."
+  echoNote: "This is not the original pattern. A trace of something recorded too early."
+  isEcho: false
+  canRecord: true
+  canWait: true
+  canDeepRecord: false
+  appearsInBook: 1
+  trioRequired: false

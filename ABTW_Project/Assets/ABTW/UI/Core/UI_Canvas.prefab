@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: UI_Canvas
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &114000001
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: ui_manager_guid, type: 3}
+  m_Name: UIManager
+
+  # Child UI references (assigned in Inspector)
+  notebookPanel: {fileID: 0}
+  hudPanel: {fileID: 0}
+  perceptionRing: {fileID: 0}
+  memoryWalkOverlay: {fileID: 0}
+  pauseMenuPanel: {fileID: 0}
+  dialoguePanel: {fileID: 0}
+
+  # Transition settings
+  panelFadeDuration: 0.25
+  overlayFadeDuration: 0.4
+
+--- !u!223 &223000001
+Canvas:
+  m_ObjectHideFlags: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0        # Screen Space - Overlay
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+
+# ── Canvas Hierarchy ──────────────────────────────────────────────────────
+# UI_Canvas (Canvas, CanvasScaler, GraphicRaycaster, UIManager)
+# ├── HUD_Layer (always visible, minimal)
+# │   ├── UI_HUD
+# │   └── UI_PerceptionRing
+# ├── Notebook_Layer (hidden by default, opens on Tab)
+# │   └── UI_Notebook
+# ├── Dialogue_Layer (hidden by default)
+# │   └── DialoguePanel
+# ├── Overlay_Layer (full-screen effects)
+# │   └── MemoryWalkOverlay
+# └── Menu_Layer (pause menu, main menu)
+#     └── PauseMenuPanel
+#
+# CanvasScaler: Scale With Screen Size
+#   Reference Resolution: 1920 x 1080
+#   Match: 0.5 (width/height balanced)

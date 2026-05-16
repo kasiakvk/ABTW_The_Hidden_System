@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: InitScene
+  m_IsActive: 1
+--- !u!114 &114000001
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: scene_setup_guid, type: 3}
+  m_Name: SceneSetup
+  # InitScene Prefab — bootstraps all core systems on game start
+  # Placed in Resources/ so it loads automatically before any scene.
+  # This is the single entry point for the entire ABTW system.
+
+  # Systems to initialize (in order)
+  initOrder:
+    - GameManager
+    - WorldManager
+    - PlayerStats
+    - PerceptionSystem
+    - NotebookSystem
+    - GlitchSystem
+    - EchoSystem
+    - TrioSystem
+    - MemoryWalkSystem
+    - AnomalySpawner
+    - SaveSystem
+    - UIManager
+    - LightingManager
+
+  # Scene to load after init
+  targetScene: "Levels/Chapter01/EastCorridor"
+
+  # Init settings
+  showLoadingScreen: false
+  initTimeoutSeconds: 10.0
+  dontDestroyOnLoad: true
+
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}

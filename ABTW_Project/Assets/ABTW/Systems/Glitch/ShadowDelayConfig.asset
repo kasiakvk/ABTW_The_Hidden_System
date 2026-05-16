@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: shadow_delay_config_guid, type: 3}
+  m_Name: ShadowDelayConfig
+  # Shadow Delay Anomaly Configuration
+  delaySeconds: 0.4
+  shadowOffsetMax: 0.08
+  glitchColor: "#6666CC"
+  activationColor: "#FFD700"
+  pulseSpeed: 1.2
+  pulseAmplitude: 0.03
+  evolutionMultiplier: 1.5
+  evolutionThresholdSeconds: 3.0
+  awarenessRequired: 0.1
+  expOnDiscover: 25
+  disappearsOnRecord: true
+  evolvesOnWait: true

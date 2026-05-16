@@ -1,0 +1,236 @@
+# ============================================================
+# ACADEMY BEYOND THIS WORLD — ACADEMY CONFIG
+# academy_config.yaml
+# Master configuration for the Academy world system
+# ============================================================
+
+academy:
+  name: "Academy Beyond This World"
+  version: "1.0"
+  canon_lock: true
+
+# ─── WORLD RULES ────────────────────────────────────────────
+world_rules:
+  golden_rule: "The Academy does not reveal itself. It responds to perception."
+  core_formula: "Attention + Understanding + Alignment = Response"
+  player_never_loses: true
+  no_combat: true
+  echo_instead_of_reset: true
+
+# ─── TIME SYSTEM ────────────────────────────────────────────
+time_system:
+  day_cycle_duration_minutes: 20
+  states:
+    - id: Morning
+      display: "Morning"
+      anomaly_multiplier: 0.7
+      atmosphere: "Quiet awareness. Soft warm light."
+      lighting_preset: Morning
+    - id: Afternoon
+      display: "Afternoon"
+      anomaly_multiplier: 1.0
+      atmosphere: "Warm social rhythm. Golden light."
+      lighting_preset: Afternoon
+    - id: Sunset
+      display: "Sunset"
+      anomaly_multiplier: 1.2
+      atmosphere: "Transition. Emotional shift. Amber."
+      lighting_preset: Sunset
+    - id: Night
+      display: "Night"
+      anomaly_multiplier: 1.8
+      atmosphere: "Perception depth. Silence. Deep navy."
+      lighting_preset: Night
+
+# ─── WEATHER SYSTEM ─────────────────────────────────────────
+weather_system:
+  states:
+    - id: Clear
+      display: "Clear"
+      anomaly_multiplier: 1.0
+      sound_echo_modifier: 1.0
+    - id: Overcast
+      display: "Overcast"
+      anomaly_multiplier: 1.1
+      sound_echo_modifier: 1.1
+    - id: Rain
+      display: "Rain"
+      anomaly_multiplier: 1.3
+      sound_echo_modifier: 1.5
+      note: "Rain makes SoundEcho anomalies easier to detect"
+    - id: Fog
+      display: "Fog"
+      anomaly_multiplier: 1.4
+      sound_echo_modifier: 0.8
+      note: "Fog reduces visibility but increases hidden layer chance"
+
+# ─── SEASON SYSTEM ──────────────────────────────────────────
+season_system:
+  states:
+    - id: Autumn
+      display: "Autumn"
+      memory_trace_bonus: 0.3
+      anomaly_multiplier: 1.1
+      atmosphere: "Memory traces more visible. Warm decay."
+    - id: Winter
+      display: "Winter"
+      stability_bonus: 0.1
+      anomaly_multiplier: 0.9
+      atmosphere: "Stability increased. Cold clarity."
+    - id: Spring
+      display: "Spring"
+      connection_bonus: 0.15
+      anomaly_multiplier: 1.0
+      atmosphere: "New patterns emerging. Fresh perception."
+    - id: Summer
+      display: "Summer"
+      awareness_bonus: 0.1
+      anomaly_multiplier: 0.8
+      atmosphere: "Calm. Social warmth. Fewer anomalies."
+
+# ─── PERCEPTION SYSTEM ──────────────────────────────────────
+perception_system:
+  mode_duration_seconds: 5.0
+  mode_cooldown_seconds: 8.0
+  scan_radius: 6.0
+  scan_fov_degrees: 110
+  notice_delay_seconds: 0.8
+  stats:
+    - id: Awareness
+      icon: "👁"
+      description: "Detect anomalies"
+      max_value: 100
+      gain_per_notice: 10
+    - id: Clarity
+      icon: "🧩"
+      description: "Understand patterns"
+      max_value: 100
+      gain_per_analysis: 15
+    - id: Connection
+      icon: "🔗"
+      description: "Link elements"
+      max_value: 100
+      gain_per_trio: 20
+    - id: Timing
+      icon: "⏳"
+      description: "Correct moment"
+      max_value: 100
+      gain_per_moment: 12
+    - id: Stability
+      icon: "🌀"
+      description: "Resist distortion"
+      max_value: 100
+      gain_per_record: 8
+
+# ─── ACADEMY RANKS ──────────────────────────────────────────
+academy_ranks:
+  - rank: 1
+    title: "Observer"
+    exp_required: 0
+    unlock: "Basic perception mode"
+  - rank: 2
+    title: "Noticer"
+    exp_required: 100
+    unlock: "Extended perception radius"
+  - rank: 3
+    title: "Pattern Seeker"
+    exp_required: 250
+    unlock: "Pattern memory (3 patterns)"
+  - rank: 4
+    title: "Interpreter"
+    exp_required: 500
+    unlock: "Deep Record ability"
+  - rank: 5
+    title: "Aligner"
+    exp_required: 900
+    unlock: "Trio synchronization boost"
+  - rank: 6
+    title: "System Aware"
+    exp_required: 1400
+    unlock: "Hidden layer detection"
+  - rank: 7
+    title: "Influence Initiate"
+    exp_required: 2000
+    unlock: "World state influence"
+  - rank: 8
+    title: "Reality Reader"
+    exp_required: 2800
+    unlock: "Memory Walk extended"
+  - rank: 9
+    title: "System Shifter"
+    exp_required: 3800
+    unlock: "Symbol activation mastery"
+  - rank: 10
+    title: "Beyond Observer"
+    exp_required: 5000
+    unlock: "Full hidden system access"
+
+# ─── EXP SOURCES ────────────────────────────────────────────
+exp_sources:
+  - action: "Notice anomaly"
+    exp: 10
+  - action: "Complete quest"
+    exp: 50
+  - action: "Correct interpretation"
+    exp: 25
+  - action: "Trio activation"
+    exp: 40
+  - action: "Discover symbol"
+    exp: 30
+  - action: "Deep Record"
+    exp: 60
+  - action: "Memory Walk insight"
+    exp: 20
+
+# ─── NOTEBOOK SYSTEM ────────────────────────────────────────
+notebook_system:
+  tabs:
+    - id: patterns
+      display: "PATTERNS"
+      icon: "📋"
+    - id: symbols
+      display: "SYMBOLS"
+      icon: "🔣"
+    - id: connections
+      display: "CONNECTIONS"
+      icon: "🔗"
+    - id: memory
+      display: "MEMORY"
+      icon: "🧠"
+  actions:
+    - id: RECORD
+      effect: "Stabilizes pattern. Gains EXP + Clarity. Closes deeper version."
+      consequence: "Pattern evolution stopped. Echo may appear later."
+    - id: WAIT
+      effect: "Pattern evolves. Unlocks hidden layers. Trio may activate."
+      consequence: "No immediate reward. Deeper understanding possible."
+    - id: DEEP_RECORD
+      effect: "Available after Trio activation. Maximum EXP. Hidden layer memory."
+      consequence: "Requires full synchronization."
+    - id: REVISIT
+      effect: "Memory Walk. Observe past events. Cannot change decisions."
+      consequence: "Distorted reconstruction. Deeper understanding only."
+
+# ─── ECHO SYSTEM ────────────────────────────────────────────
+echo_system:
+  trigger: "Pattern recorded before full activation"
+  echo_intensity: 0.4
+  echo_duration_seconds: 8.0
+  notebook_entry: "Echo Detected — This is not the original pattern. A trace of something recorded too early."
+
+# ─── SAVE SYSTEM ────────────────────────────────────────────
+save_system:
+  autosave_interval_seconds: 120
+  save_filename: "abtw_save.json"
+  max_save_slots: 3
+
+# ─── FORBIDDEN DIRECTIONS ───────────────────────────────────
+forbidden:
+  - "Dystopian collapse"
+  - "Grimdark horror"
+  - "Overdesigned magic systems"
+  - "Combat as core mechanic"
+  - "Spectacle fantasy"
+  - "Empty architecture showcases"
+  - "Game-level feeling"
+  - "Flashy magic effects"

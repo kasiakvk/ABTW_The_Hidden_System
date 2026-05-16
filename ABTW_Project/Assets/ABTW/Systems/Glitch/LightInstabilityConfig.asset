@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: light_instability_config_guid, type: 3}
+  m_Name: LightInstabilityConfig
+  # Light Instability Anomaly Configuration
+  flickerSpeed: 0.8
+  flickerAmplitude: 0.15
+  minIntensity: 0.6
+  maxIntensity: 1.2
+  glitchColor: "#4488FF"
+  activationColor: "#FFFACD"
+  warmthShift: -0.08
+  evolutionFlickerMultiplier: 2.0
+  awarenessRequired: 0.2
+  expOnDiscover: 30
+  affectsNearbyLights: true
+  affectRadius: 5.0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: season_system_guid, type: 3}
+  m_Name: SeasonSystem
+  # Season System Configuration
+  startSeason: Autumn
+  # Book 1 = Autumn (perception awakening)
+  # Book 2 = Winter (stability, silence)
+  # Book 3 = Spring (patterns emerging)
+  # Book 4 = Summer (full activation)
+  autumnAnomalyMultiplier: 1.2
+  winterAnomalyMultiplier: 0.7
+  springAnomalyMultiplier: 1.0
+  summerAnomalyMultiplier: 1.5
+  autumnMemoryTraceBonus: 0.2
+  winterStabilityBonus: 0.15
+  springConnectionBonus: 0.1
+  summerActivationBonus: 0.25
+  # Atmosphere colors per season
+  autumnFogColor: "#AA8866"
+  winterFogColor: "#AABBCC"
+  springFogColor: "#88AA88"
+  summerFogColor: "#AABBFF"
+  autumnAmbientColor: "#CC9966"
+  winterAmbientColor: "#DDEEFF"
+  springAmbientColor: "#AACCAA"
+  summerAmbientColor: "#FFEEAA"

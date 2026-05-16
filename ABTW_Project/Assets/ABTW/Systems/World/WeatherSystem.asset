@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: weather_system_guid, type: 3}
+  m_Name: WeatherSystem
+  # Weather System Configuration
+  startWeather: Clear
+  weatherChangesAutomatically: false
+  # Fog density per weather
+  clearFogDensity: 0.005
+  overcastFogDensity: 0.015
+  rainFogDensity: 0.020
+  fogWeatherFogDensity: 0.040
+  # Sound multipliers per weather
+  clearSoundMultiplier: 1.0
+  rainSoundMultiplier: 1.4
+  fogSoundMultiplier: 1.6
+  # Perception modifiers
+  clearPerceptionBonus: 0.0
+  rainPerceptionBonus: 0.1
+  fogPerceptionPenalty: -0.15
+  # Stability modifiers
+  clearStabilityBonus: 0.05
+  rainStabilityPenalty: -0.05
+  fogStabilityPenalty: -0.10

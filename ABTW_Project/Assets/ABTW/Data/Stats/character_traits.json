@@ -1,0 +1,262 @@
+{
+  "version": "1.0",
+  "canon_lock": true,
+  "description": "ABTW Character Traits — complete profiles for all characters",
+  "series": "Academy Beyond This World",
+
+  "main_characters": [
+    {
+      "id": "ASTRA",
+      "name": "Astra",
+      "role": "Perceiver — Main Playable Character",
+      "age": 12,
+      "book_introduced": 1,
+
+      "core_trait": "She sees what others cannot. Not because she is special — because she pays attention.",
+      "perception_type": "Visual + Emotional",
+      "strength": "Noticing anomalies before they fully form",
+      "weakness": "Doubts herself — 'Is this real… or is it just me?'",
+
+      "stats_base": {
+        "Awareness": 70,
+        "Clarity": 45,
+        "Connection": 55,
+        "Timing": 50,
+        "Stability": 40
+      },
+
+      "voice_guide": {
+        "tone": "Quiet, observational, uncertain but curious",
+        "speaks_when": "She has noticed something significant",
+        "never_says": "I know exactly what this means",
+        "signature_phrases": [
+          "Something feels… off.",
+          "It's not random.",
+          "Did you see that?",
+          "Wait — look at the shadow."
+        ],
+        "internal_monologue_style": "Short, fragmented, questioning"
+      },
+
+      "arc_progression": {
+        "book_1": "Notices first anomalies. Doubts her perception.",
+        "book_2": "Begins to trust what she sees.",
+        "book_3": "Understands patterns have meaning.",
+        "book_4": "Realizes her perception affects the world.",
+        "book_8": "Accepts her role as the Academy's perceiver.",
+        "book_12": "Understands the Academy was always part of how the world works."
+      },
+
+      "relationship_with_lumi": "Complementary. Astra sees, Lumi explains. Occasional tension when Lumi over-analyzes.",
+      "relationship_with_nela": "Intuitive bond. Nela often acts on what Astra notices before Astra decides.",
+
+      "forbidden_characterization": [
+        "Chosen one narrative",
+        "Special magical powers",
+        "Instant confidence",
+        "Combat ability"
+      ]
+    },
+
+    {
+      "id": "LUMI",
+      "name": "Lumi",
+      "role": "Analyzer — AI Companion (future: Player 2)",
+      "age": 12,
+      "book_introduced": 1,
+
+      "core_trait": "She seeks answers through logic, data, and structure. The world makes sense if you measure it correctly.",
+      "perception_type": "Analytical + Structural",
+      "strength": "Pattern recognition, data correlation, notebook documentation",
+      "weakness": "Can over-analyze and miss the emotional truth",
+
+      "stats_base": {
+        "Awareness": 50,
+        "Clarity": 85,
+        "Connection": 60,
+        "Timing": 45,
+        "Stability": 70
+      },
+
+      "voice_guide": {
+        "tone": "Precise, calm, slightly formal, genuinely curious",
+        "speaks_when": "She has identified a pattern or inconsistency",
+        "never_says": "I feel like…",
+        "signature_phrases": [
+          "It's repeating.",
+          "The interval is consistent — 0.4 seconds.",
+          "Three occurrences. That's not random.",
+          "I've catalogued this before.",
+          "The data suggests a deeper layer."
+        ],
+        "notebook_style": "Precise measurements, timestamps, cross-references"
+      },
+
+      "arc_progression": {
+        "book_1": "Notebook starts responding on its own. Unsettled.",
+        "book_2": "Accepts that data can be incomplete.",
+        "book_3": "Learns that some patterns require feeling, not just measuring.",
+        "book_8": "Understands that her analysis is one layer of a larger system."
+      },
+
+      "relationship_with_astra": "Protective, analytical. Provides structure to Astra's observations.",
+      "relationship_with_nela": "Friction — Nela acts on instinct, Lumi needs data first.",
+
+      "trio_contribution": "Understanding — feeds Clarity into ActivationLogic",
+
+      "forbidden_characterization": [
+        "Cold robot personality",
+        "Always right",
+        "Dismissive of emotion",
+        "Comic relief"
+      ]
+    },
+
+    {
+      "id": "NELA",
+      "name": "Nela",
+      "role": "Action Maker — AI Companion (future: Player 3)",
+      "age": 12,
+      "book_introduced": 1,
+
+      "core_trait": "She approaches the world with creativity and instinct. She feels the right moment before it arrives.",
+      "perception_type": "Temporal + Emotional",
+      "strength": "Timing, sensing alignment windows, creative interpretation",
+      "weakness": "Acts too quickly sometimes. Misses the analysis layer.",
+
+      "stats_base": {
+        "Awareness": 60,
+        "Clarity": 50,
+        "Connection": 75,
+        "Timing": 90,
+        "Stability": 45
+      },
+
+      "voice_guide": {
+        "tone": "Warm, instinctive, brief, occasionally cryptic",
+        "speaks_when": "The moment is right — or wrong",
+        "never_says": "According to the data…",
+        "signature_phrases": [
+          "Now.",
+          "Wait… now.",
+          "Not yet.",
+          "I can feel it.",
+          "The world is ready.",
+          "We missed it. There will be another."
+        ],
+        "action_style": "Acts first, explains later (or not at all)"
+      },
+
+      "arc_progression": {
+        "book_1": "Senses anomalies emotionally before they're visible.",
+        "book_2": "Learns that timing without understanding is incomplete.",
+        "book_3": "Begins to trust Lumi's analysis as a complement.",
+        "book_8": "Understands that alignment requires all three perspectives."
+      },
+
+      "relationship_with_astra": "Instinctive trust. Often acts on Astra's observations immediately.",
+      "relationship_with_lumi": "Creative tension. Nela's instinct vs Lumi's data.",
+
+      "trio_contribution": "Alignment — feeds Timing into ActivationLogic",
+
+      "forbidden_characterization": [
+        "Reckless without consequence",
+        "Purely comic",
+        "Emotionally unstable",
+        "Sidekick role"
+      ]
+    }
+  ],
+
+  "secondary_characters": [
+    {
+      "id": "PROF_Q",
+      "name": "Professor Q",
+      "role": "Academy Teacher — Perception Studies",
+      "alignment": "Knows more than she reveals",
+      "voice_guide": {
+        "tone": "Calm, layered, never explains fully",
+        "signature_phrases": [
+          "What did you notice?",
+          "And what did you decide to do with that?",
+          "The Academy has been waiting for this question."
+        ]
+      }
+    },
+    {
+      "id": "MR_VALE",
+      "name": "Mr. Vale",
+      "role": "Academy Administrator — Systems",
+      "alignment": "Maintains order. Uncomfortable with anomalies.",
+      "voice_guide": {
+        "tone": "Formal, slightly anxious, precise",
+        "signature_phrases": [
+          "That is not how the Academy functions.",
+          "Please document this in the standard format.",
+          "I will need to review the records."
+        ]
+      }
+    },
+    {
+      "id": "NOCTRA",
+      "name": "Noctra",
+      "role": "Student — Advanced Year",
+      "alignment": "Knows the hidden system. Chooses not to share.",
+      "voice_guide": {
+        "tone": "Quiet, observational, slightly distant",
+        "signature_phrases": [
+          "You're starting to see it.",
+          "Don't record it yet.",
+          "Some things are better understood slowly."
+        ]
+      }
+    },
+    {
+      "id": "ORION",
+      "name": "Orion",
+      "role": "Student — Same year as Astra",
+      "alignment": "Curious but skeptical. Becomes believer slowly.",
+      "voice_guide": {
+        "tone": "Skeptical, dry humor, gradually warming",
+        "signature_phrases": [
+          "That's just a shadow.",
+          "…okay, that was strange.",
+          "Don't tell anyone I said this, but — I saw it too."
+        ]
+      }
+    },
+    {
+      "id": "NIMBUS",
+      "name": "Nimbus",
+      "role": "Academy Entity — Not fully explained",
+      "alignment": "Part of the hidden system. Not a character in the traditional sense.",
+      "voice_guide": {
+        "tone": "Environmental. Communicates through the world, not words.",
+        "signature_phrases": [
+          "(light shifts)",
+          "(shadow pauses)",
+          "(symbol appears)"
+        ]
+      }
+    }
+  ],
+
+  "character_rules": {
+    "no_exaggerated_archetypes": true,
+    "no_empty_npc_feeling": true,
+    "no_generic_fantasy_students": true,
+    "growth_through_perception_not_visuals": true,
+    "character_redesign_never_happens": true,
+    "trio_never_complete_system_alone": true
+  },
+
+  "relationship_map": {
+    "Astra_Lumi": "Complementary — observation + analysis",
+    "Astra_Nela": "Intuitive — observation + timing",
+    "Lumi_Nela": "Tension + growth — data vs instinct",
+    "Trio_Academy": "The Academy responds to all three together",
+    "Astra_ProfQ": "Mentor relationship — Q guides without explaining",
+    "Astra_Noctra": "Mystery — Noctra knows more, reveals slowly",
+    "Astra_Orion": "Peer — skeptic becomes witness"
+  }
+}

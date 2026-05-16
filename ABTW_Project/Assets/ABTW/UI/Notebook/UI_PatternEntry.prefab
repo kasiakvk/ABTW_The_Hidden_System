@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: UI_PatternEntry
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+
+# ── Pattern Entry Prefab ──────────────────────────────────────────────────
+# Instantiated dynamically for each pattern in the Patterns tab.
+# Layout:
+#   PatternEntry (VerticalLayoutGroup)
+#   ├── HeaderRow (HorizontalLayoutGroup)
+#   │   ├── StatusDot (Image — grey/gold/blue/purple)
+#   │   └── PatternTitle (TextMeshPro — bold)
+#   ├── LocationText (TextMeshPro — small, italic)
+#   ├── ObservationsList (VerticalLayoutGroup)
+#   │   └── ObservationItem (TextMeshPro — "— observation text")
+#   ├── NotesRow (HorizontalLayoutGroup)
+#   │   ├── LumiNote (TextMeshPro — italic, cool blue tint)
+#   │   └── NelaNote (TextMeshPro — italic, warm tint)
+#   └── ActionRow (HorizontalLayoutGroup)
+#       ├── RecordButton
+#       └── WaitButton
+#
+# Status Dot Colors:
+#   Unrecorded  → #888888 (grey)
+#   Recorded    → #FFD700 (gold)
+#   Echo        → #8866AA (purple)
+#   Forming     → #4488FF (blue)
+#   Activation  → #FFD700 (warm gold, pulsing)
+#   Resolved    → #AACCFF (soft white-blue)
+#
+# Data binding: PatternEntryController.cs sets all fields from PatternData

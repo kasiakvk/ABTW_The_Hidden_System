@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: Nela
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: -0.8, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &114000001
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: nela_companion_guid, type: 3}
+  m_Name: NelaCompanion
+
+  # Nela — approaches the world with creativity and instinct
+  # She feels the moment. She knows when to act.
+
+  followDistance: 1.2
+  followSmoothTime: 0.18
+  instinctDelay: 0.8           # Nela reacts faster than Lumi — instinct, not analysis
+  timingWindowSeconds: 0.5     # window during which Nela's "now" triggers Trio
+
+  # Dialogue lines (Book 1 — East Corridor)
+  glitchDetectedLine: "Don't write it yet."
+  patternFoundLine: "Something else is coming."
+  trioReadyLine: "Wait… now."
+  recordedLine: "You closed it."
+  waitChosenLine: "Yes. Let it breathe."
+  echoDetectedLine: "It remembers being more than this."
+
+--- !u!114 &114000002
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: nela_action_maker_guid, type: 3}
+  m_Name: NelaActionMaker
+
+  # Timing system
+  timingAccuracy: 0.85         # how often Nela's timing is correct
+  instinctCooldown: 5.0        # seconds between instinct triggers
+  alignmentSensitivity: 0.7    # how sensitive Nela is to world alignment
+
+--- !u!136 &136000001
+CapsuleCollider:
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 1.65
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.825, z: 0}
+
+# ── Nela Character Notes ──────────────────────────────────────────────────
+# Nela moves slightly differently from Astra and Lumi.
+# She sometimes stops and tilts her head before the others notice anything.
+# She is the one who says "now" at the exact right moment.
+# Voice: warm, unhurried, occasionally cryptic.
+# She never explains her instincts — she just acts on them.
+# During Trio activation: Nela's line always comes last, triggering the event.
+# Canon rule: Nela grows through connection, not visuals.

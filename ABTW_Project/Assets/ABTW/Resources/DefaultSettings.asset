@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: default_settings_guid, type: 3}
+  m_Name: DefaultSettings
+  # ABTW Default Player Settings
+  # Applied on first launch or when player resets to defaults.
+
+  # ── Display ────────────────────────────────────────────────────────────────
+  resolution: [1920, 1080]
+  fullscreen: true
+  vsync: true
+  targetFPS: 60
+  shadowQuality: 2          # 0=Off 1=Low 2=Medium 3=High
+  antiAliasing: 2           # 0=Off 2=2x 4=4x 8=8x
+  textureQuality: 0         # 0=Full 1=Half 2=Quarter
+
+  # ── Audio ──────────────────────────────────────────────────────────────────
+  masterVolume: 1.0
+  musicVolume: 0.7
+  ambientVolume: 0.85
+  sfxVolume: 0.9
+  uiVolume: 0.8
+  subtitlesEnabled: true
+
+  # ── Accessibility ──────────────────────────────────────────────────────────
+  colorblindMode: None      # None / Deuteranopia / Protanopia / Tritanopia
+  highContrastUI: false
+  reducedMotion: false      # disables subtle distortion effects
+  largerText: false
+
+  # ── Gameplay ───────────────────────────────────────────────────────────────
+  perceptionModeHints: true       # show subtle UI hint when Perception Mode activates
+  notebookAutoOpen: false         # auto-open notebook when anomaly detected
+  echoNotifications: true         # show subtle indicator when Echo spawns
+  memoryWalkPrompt: true          # show prompt when Memory Walk is available
+
+  # ── Controls ───────────────────────────────────────────────────────────────
+  mouseSensitivity: 1.0
+  invertY: false
+  controllerEnabled: true
+  controllerVibration: true
+
+  keyBindings:
+    moveForward:  W
+    moveBack:     S
+    moveLeft:     A
+    moveRight:    D
+    openNotebook: Tab
+    memoryWalk:   M
+    pause:        Escape
+    interact:     E
+    sprint:       LeftShift
+
+  # ── Language ───────────────────────────────────────────────────────────────
+  language: en
+  supportedLanguages: [en, pl]

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: echo_config_guid, type: 3}
+  m_Name: EchoConfig
+  # Echo System Configuration
+  echoSpawnDelaySeconds: 30.0
+  echoIntensityMultiplier: 0.4
+  echoLifetimeSeconds: 15.0
+  echoColor: "#AA88BB"
+  echoAlpha: 0.35
+  maxActiveEchoes: 3
+  echoInteractionAllowed: false
+  notebookHintOnEcho: true
+  echoHintText: "This is not the original pattern. A trace of something recorded too early."
+  expOnEchoEncounter: 10

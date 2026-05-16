@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_Name: UI_EchoEntry
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+
+# ── Echo Entry Prefab ─────────────────────────────────────────────────────
+# Shown in the Memory tab when an Echo has been encountered.
+# Visually distinct from normal pattern entries — faded, incomplete.
+#
+# Layout:
+#   EchoEntry (VerticalLayoutGroup)
+#   ├── HeaderRow (HorizontalLayoutGroup)
+#   │   ├── EchoDot (Image — purple, semi-transparent)
+#   │   └── EchoTitle (TextMeshPro — italic, faded)
+#   ├── EchoLabel (TextMeshPro — small caps: "ECHO DETECTED")
+#   ├── EchoDescription (TextMeshPro — italic)
+#   │   "This is not the original pattern."
+#   │   "A trace of something recorded too early."
+#   ├── OriginalPatternRef (TextMeshPro — small, grey)
+#   │   "Original: [PatternName]"
+#   └── ActionRow
+#       ├── ViewMemoryButton  ("VIEW MEMORY")
+#       └── AcceptButton      ("ACCEPT")
+#
+# Design Rules:
+#   - Echo entries are always visually softer than normal entries
+#   - Text opacity: 70% (not full black — incomplete)
+#   - Background: slightly different texture (worn, faded)
+#   - No RECORD button — echoes cannot be recorded, only acknowledged
+#   - VIEW MEMORY opens Memory Walk for the original pattern moment
+#   - ACCEPT closes the echo notification
+#
+# Echo Color: #8866AA (purple-grey)
+# Echo Font Style: italic, slightly smaller than normal entries
