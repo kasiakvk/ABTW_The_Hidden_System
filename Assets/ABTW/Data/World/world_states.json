@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "current_chapter": 1,
+  "current_time": "afternoon",
+  "current_season": "autumn",
+  "current_weather": "clear",
+  "anomalies_active": [],
+  "anomalies_recorded": [],
+  "anomalies_echo": [],
+  "symbols_discovered": [],
+  "symbols_activated": [],
+  "trio_activations": 0,
+  "world_stability": 1.0,
+  "hidden_layer_exposed": false
+}

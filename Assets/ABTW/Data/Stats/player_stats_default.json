@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "player_id": "ASTRA",
+  "rank": 1,
+  "rank_title": "Observer",
+  "exp": 0,
+  "exp_to_next": 100,
+  "stats": {
+    "awareness": 1,
+    "clarity": 0,
+    "connection": 0,
+    "timing": 0,
+    "stability": 1
+  },
+  "layers_visible": [0],
+  "trio_activation_available": false,
+  "memory_walk_available": false
+}

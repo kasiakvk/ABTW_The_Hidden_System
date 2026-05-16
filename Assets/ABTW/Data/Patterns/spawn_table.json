@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "chapter": 1,
+  "anomalies": [
+    {
+      "id": "ANOM_001",
+      "type": "ShadowDelay",
+      "location": "ROOM_CORRIDOR_EAST",
+      "trigger_awareness": 0.3,
+      "intensity_start": 0.2,
+      "intensity_max": 0.8,
+      "trio_required": false,
+      "book": 1
+    },
+    {
+      "id": "ANOM_002",
+      "type": "ReflectionMismatch",
+      "location": "ROOM_LIBRARY_MAIN",
+      "trigger_awareness": 0.3,
+      "intensity_start": 0.1,
+      "intensity_max": 0.5,
+      "trio_required": false,
+      "book": 2
+    },
+    {
+      "id": "ANOM_003",
+      "type": "SymbolFragment",
+      "location": "ROOM_OBSERVATORY_MAIN",
+      "trigger_awareness": 0.5,
+      "intensity_start": 0.3,
+      "intensity_max": 1.0,
+      "trio_required": true,
+      "book": 1
+    }
+  ]
+}

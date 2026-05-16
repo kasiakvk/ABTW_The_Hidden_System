@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "entries": [
+    {
+      "id": "ENTRY_001",
+      "pattern_id": "SYM_001",
+      "title": "PATTERN: SHADOW DELAY",
+      "status": "Unrecorded",
+      "tab": "PATTERNS",
+      "observations": [
+        "movement mismatch (x3)",
+        "delay ~0.4s",
+        "location: East Corridor"
+      ],
+      "lumi_note": "It's repeating. The interval is consistent.",
+      "nela_note": "Don't write it yet. Something else is coming.",
+      "echo_note": "This is not the original pattern. A trace of something recorded too early.",
+      "recorded_at": null,
+      "is_echo": false
+    }
+  ]
+}
