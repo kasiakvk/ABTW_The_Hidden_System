@@ -1,0 +1,140 @@
+# ============================================================
+# ABTW: The Hidden System — Pipeline Configuration
+# VERSION: 1.0 — Full Canon Lock
+# ============================================================
+
+project:
+  name: "Academy Beyond This World: The Hidden System"
+  version: "1.0"
+  status: "Pre-Production"
+  engine: "Unity 2022.3 LTS"
+  platform: "PC (Windows primary)"
+  genre: "Narrative 3D Perception Adventure"
+
+paths:
+  workspace_root: "/workspace"
+  production_root: "/workspace/ABTW_Production"
+  unity_local: "C:/ABTW_The_Hidden_System/ABTW_The_Hidden_System"
+  assets_output: "/workspace/ABTW_Production/ABTW_Unity/Assets/ABTW"
+  docs_output: "/workspace/ABTW_Production/docs"
+  checklists_output: "/workspace/ABTW_Production/checklists"
+  pipeline_output: "/workspace/ABTW_Production/pipeline"
+
+pipeline:
+  auto_generate_placeholders: true
+  auto_validate_on_run: true
+  sync_to_local_on_generate: false   # Set true when Unity project is present
+  log_level: "INFO"
+  log_file: "abtw_pipeline.log"
+
+phases:
+  pre_production:
+    label: "Pre-Production"
+    duration_weeks: 4
+    deliverables:
+      - "All .md documentation complete"
+      - "symbol_map.json locked"
+      - "world_config.json locked"
+      - "pipeline_config.yaml locked"
+      - "PNG asset checklist generated"
+      - "PowerShell scripts ready"
+  alpha:
+    label: "Alpha"
+    duration_weeks: 8
+    deliverables:
+      - "Core scripts (GameManager, PlayerMovement, PlayerStats)"
+      - "PerceptionSystem + GlitchSystem functional"
+      - "NotebookUI with Record/Wait buttons"
+      - "EastCorridor level playable"
+      - "ShadowDelayAnomaly working"
+  beta:
+    label: "Beta"
+    duration_weeks: 8
+    deliverables:
+      - "All 30 core scripts complete"
+      - "TrioSystem + EchoSystem functional"
+      - "MemoryWalkSystem functional"
+      - "All Chapter 1 levels playable"
+      - "All character assets integrated"
+      - "All symbol states implemented"
+  gold:
+    label: "Gold / Launch"
+    duration_weeks: 4
+    deliverables:
+      - "Full QA pass"
+      - "All graphic assets delivered and integrated"
+      - "Audio integrated"
+      - "Build output: ABTW.exe"
+      - "Canon compliance verified"
+
+team:
+  size: "Solo / Small (1-3 people)"
+  roles:
+    - "Creative Director / Writer"
+    - "Graphic Artist / Illustrator"
+    - "Programmer (Unity C#)"
+
+canon:
+  golden_rule: "The Academy does not reveal itself. It responds to perception."
+  forbidden_drift:
+    - "dystopian_collapse"
+    - "grimdark_horror"
+    - "overdesigned_magic"
+    - "cyberpunk_drift"
+    - "spectacle_fantasy"
+    - "empty_architecture"
+    - "game_level_feeling"
+    - "fantasy_theme_park"
+
+colour_dna:
+  deep_navy: "#1A2942"
+  indigo: "#2D3A6B"
+  violet: "#5B4A8A"
+  warm_gold: "#C9A84C"
+  muted_magenta: "#8B4A6B"
+  slate_blue: "#4A5568"
+  ivory: "#F9F2E7"
+  soft_cyan: "#7EC8C8"
+  charcoal: "#2D3748"
+  white: "#FFFFFF"
+
+anomaly_rules:
+  normal_world_percentage: 70
+  anomaly_percentage: 30
+  max_intensity_at_spawn: 0.3
+  glitch_delay_seconds_min: 0.3
+  glitch_delay_seconds_max: 0.5
+  echo_intensity_multiplier: 0.4
+  trio_wait_seconds: 3.0
+
+perception_stats:
+  awareness:
+    symbol: "eye"
+    function: "detect_anomalies"
+    glitch_trigger_threshold: 0.3
+  clarity:
+    symbol: "puzzle"
+    function: "understand_patterns"
+    forming_trigger_threshold: 0.5
+  connection:
+    symbol: "link"
+    function: "link_elements"
+    activation_trigger_threshold: 0.7
+  timing:
+    symbol: "hourglass"
+    function: "correct_moment"
+  stability:
+    symbol: "spiral"
+    function: "resist_distortion"
+
+academy_ranks:
+  1: "Observer"
+  2: "Noticer"
+  3: "Pattern Seeker"
+  4: "Interpreter"
+  5: "Aligner"
+  6: "System Aware"
+  7: "Influence Initiate"
+  8: "Reality Reader"
+  9: "System Shifter"
+  10: "Beyond Observer"

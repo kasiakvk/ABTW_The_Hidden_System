@@ -1,0 +1,287 @@
+{
+  "version": "1.0",
+  "canon_lock": true,
+  "project": "Academy Beyond This World: The Hidden System",
+  "golden_rule": "The Academy does not reveal itself. It responds to perception.",
+
+  "world_identity": {
+    "is": [
+      "alive",
+      "emotionally intelligent",
+      "socially inhabited",
+      "perceptive",
+      "layered",
+      "ancient but evolving",
+      "calm but mysterious",
+      "beautiful without spectacle",
+      "emotionally responsive",
+      "larger than the characters"
+    ],
+    "is_not": [
+      "a static fantasy school",
+      "a combat arena",
+      "a spectacle magic castle",
+      "an empty architecture showcase",
+      "a dark horror labyrinth",
+      "a dystopian institution"
+    ]
+  },
+
+  "locations": {
+    "ROOM_CORRIDOR_EAST": {
+      "name": "East Corridor",
+      "emotional_function": "Observation — the world is slightly wrong",
+      "pacing_role": "Introduction / tension build",
+      "anomaly_frequency": "High",
+      "chapter_first_appears": 1,
+      "lighting": {
+        "primary": "warm_gold_3200K",
+        "secondary": "cool_ambient_5500K",
+        "contrast": "intentional"
+      },
+      "architecture": "High vaulted ceilings, stone with warm wood accents, large windows on one side",
+      "floor": "Dark polished stone — reflections slightly wrong even in normal state",
+      "scale_rule": "Must feel larger than the characters",
+      "states": ["NORMAL", "GLITCH", "ACTIVATION"],
+      "anomalies_present": ["SYM_001", "SYM_008"]
+    },
+    "ROOM_CORRIDOR_WEST": {
+      "name": "West Corridor",
+      "emotional_function": "Echo — sound carries memory",
+      "pacing_role": "Secondary exploration",
+      "anomaly_frequency": "Low",
+      "chapter_first_appears": 1,
+      "anomalies_present": ["SYM_008"]
+    },
+    "ROOM_CORRIDOR_JUNCTION": {
+      "name": "Central Corridor Junction",
+      "emotional_function": "Convergence — all paths meet",
+      "pacing_role": "Revelation",
+      "anomaly_frequency": "Medium",
+      "chapter_first_appears": 3,
+      "anomalies_present": ["SYM_004"]
+    },
+    "ROOM_OBSERVATORY_MAIN": {
+      "name": "Main Observatory",
+      "emotional_function": "Wonder — scale and cosmic awareness",
+      "pacing_role": "Breathing / reflection",
+      "anomaly_frequency": "Medium",
+      "chapter_first_appears": 1,
+      "lighting": {
+        "primary": "cool_navy",
+        "secondary": "gold_observational",
+        "atmosphere": "layered silence, distant stars"
+      },
+      "architecture": "Circular floor, brass telescope, star map ceiling",
+      "anomalies_present": ["SYM_002", "SYM_007"]
+    },
+    "ROOM_LIBRARY_MAIN": {
+      "name": "Library Archive",
+      "emotional_function": "Hidden truth — knowledge that is incomplete",
+      "pacing_role": "Investigation / slow burn",
+      "anomaly_frequency": "Medium",
+      "chapter_first_appears": 2,
+      "lighting": {
+        "primary": "warm_amber_reading_lamps",
+        "secondary": "cool_blue_deeper_sections",
+        "rule": "Deeper = cooler light"
+      },
+      "anomalies_present": ["SYM_003"]
+    },
+    "ROOM_CLASSROOM_MAIN": {
+      "name": "Main Classroom",
+      "emotional_function": "Social warmth — belonging and routine",
+      "pacing_role": "Grounding / normalcy",
+      "anomaly_frequency": "Low",
+      "chapter_first_appears": 1
+    },
+    "ROOM_DORMITORY_HALL": {
+      "name": "Dormitory Hall",
+      "emotional_function": "Vulnerability — safety and memory",
+      "pacing_role": "Emotional recovery",
+      "anomaly_frequency": "Very Low",
+      "chapter_first_appears": 1,
+      "anomalies_present": ["SYM_005"]
+    },
+    "ROOM_GARDEN_MAIN": {
+      "name": "Academy Gardens",
+      "emotional_function": "Reflection — nature as emotional mirror",
+      "pacing_role": "Breathing / reset",
+      "anomaly_frequency": "Low",
+      "chapter_first_appears": 2,
+      "anomalies_present": ["SYM_006"]
+    },
+    "ROOM_ROOFTOP": {
+      "name": "Rooftop",
+      "emotional_function": "Perspective — seeing the whole picture",
+      "pacing_role": "Climactic / revelatory",
+      "anomaly_frequency": "High",
+      "chapter_first_appears": 3
+    },
+    "ROOM_HIDDEN_HALL": {
+      "name": "Hidden Halls",
+      "emotional_function": "Deep mystery — the system beneath the system",
+      "pacing_role": "Climax / discovery",
+      "anomaly_frequency": "Very High",
+      "chapter_first_appears": 4,
+      "requires_trio": true
+    }
+  },
+
+  "time_states": {
+    "morning": {
+      "visual_mood": "Soft gold, mist in gardens, long shadows",
+      "anomaly_behaviour": "Low frequency, subtle",
+      "emotional_tone": "Quiet awareness, fresh start"
+    },
+    "afternoon": {
+      "visual_mood": "Warm social light, busy corridors",
+      "anomaly_behaviour": "Medium frequency, social",
+      "emotional_tone": "Warm rhythm, belonging"
+    },
+    "sunset": {
+      "visual_mood": "Deep orange-gold, long dramatic shadows",
+      "anomaly_behaviour": "High frequency, transitional",
+      "emotional_tone": "Emotional shift, anticipation"
+    },
+    "night": {
+      "visual_mood": "Deep navy, silver moonlight, stars visible indoors",
+      "anomaly_behaviour": "Very high, perception depth",
+      "emotional_tone": "Silence, mystery, depth"
+    },
+    "rain": {
+      "visual_mood": "Grey-blue, reflective surfaces everywhere",
+      "anomaly_behaviour": "Unstable, unpredictable",
+      "emotional_tone": "Reflection, instability"
+    }
+  },
+
+  "seasons": {
+    "autumn": {
+      "atmosphere": "Warm amber, falling leaves, memory traces more visible",
+      "anomaly_modifier": 1.2,
+      "emotional_tone": "Nostalgia, transition"
+    },
+    "winter": {
+      "atmosphere": "Cool silver, stillness, sharp clarity",
+      "stability_modifier": 1.1,
+      "emotional_tone": "Isolation, focus"
+    },
+    "spring": {
+      "atmosphere": "Soft green-gold, renewal, garden spiral grows",
+      "anomaly_modifier": 0.9,
+      "emotional_tone": "Hope, discovery"
+    },
+    "summer": {
+      "atmosphere": "Bright warm gold, social energy, long days",
+      "anomaly_modifier": 0.8,
+      "emotional_tone": "Belonging, warmth"
+    }
+  },
+
+  "characters": {
+    "ASTRA": {
+      "role": "Player Character — The Perceiver",
+      "age": "12-13",
+      "core_trait": "Emotionally grounded, quietly observant, thoughtful before acting",
+      "arc": "Something is wrong → Reality responds to perception",
+      "colour_palette": ["#1A2942", "#2D3A6B", "#5B4A8A", "#C9A84C"],
+      "hair": "Dark indigo-purple, slightly wavy, medium length",
+      "signature": "Small star-shaped hair clip (left side)",
+      "forbidden": ["combat poses", "power stances", "heroic running animations"]
+    },
+    "LUMI": {
+      "role": "AI Companion — The Analyst",
+      "age": "12-13",
+      "core_trait": "Analytical, calm, notebook-centred, finds comfort in structure",
+      "arc": "Everything can be understood → Understanding requires emotional openness",
+      "colour_palette": ["#7EC8C8", "#FFFFFF", "#1A2942", "#CCFFEE"],
+      "hair": "Light blonde, neat, often tucked behind ears",
+      "signature": "Always holding or near her notebook",
+      "notebook_ink": "#1A2942"
+    },
+    "NELA": {
+      "role": "AI Companion — The Aligner",
+      "age": "12-13",
+      "core_trait": "Energetic, improvisational, movement-oriented, feels before she thinks",
+      "arc": "Follow the feeling → Connection itself changes reality",
+      "colour_palette": ["#C9A84C", "#8B4A00", "#FF8C42", "#FFD700"],
+      "hair": "Warm auburn, curly, often escaping",
+      "signature": "Mismatched earrings — one star, one moon",
+      "notebook_ink": "#C9A84C"
+    }
+  },
+
+  "notebook_system": {
+    "purpose": "reality-affecting system — NOT a quest log",
+    "tabs": ["PATTERNS", "SYMBOLS", "CONNECTIONS", "MEMORY"],
+    "ink_colours": {
+      "lumi": "#1A2942",
+      "astra": "#5B4A8A",
+      "nela": "#C9A84C",
+      "echo": "#AAAAAA"
+    },
+    "decisions": {
+      "RECORD": {
+        "immediate": "Pattern stabilises. World calms. +Clarity, +EXP.",
+        "long_term": "Pattern ends. Deeper version locked. Echo appears later.",
+        "visual": "Shadows return to normal. Notebook entry fills in completely."
+      },
+      "WAIT": {
+        "immediate": "Pattern evolves. Anomaly intensifies. Trio timer begins.",
+        "long_term": "Deeper layers unlock. Hidden content accessible. Trio Activation possible.",
+        "visual": "Shadows spread. New symbols form. Environment responds."
+      },
+      "DEEP_RECORD": {
+        "requires": "Trio Activation",
+        "immediate": "Full pattern captured. Hidden layer recorded. Maximum reward.",
+        "long_term": "Complete understanding. No Echo. World permanently changed.",
+        "visual": "Golden light fills the space. Symbol fully forms. Notebook glows briefly."
+      }
+    }
+  },
+
+  "trio_activation": {
+    "conditions": {
+      "astra": "Observing active anomaly (Awareness check passed)",
+      "lumi": "Pattern analysed (Clarity check passed)",
+      "nela": "Correct moment sensed (player must not click for 3 seconds)"
+    },
+    "visual_sequence": [
+      "Environment subtly dims — not dark, but focused",
+      "Lumi notebook begins drawing on its own",
+      "Nela says: Wait… now.",
+      "Soft golden pulse radiates from anomaly location",
+      "Hidden layer appears — new symbols, new paths",
+      "UI shows TRIO SYNCHRONIZATION"
+    ],
+    "forbidden_effects": [
+      "dramatic explosions",
+      "bright flashes",
+      "combat-style effects",
+      "dramatic music swells"
+    ]
+  },
+
+  "echo_system": {
+    "rule": "The world does not reset. It echoes.",
+    "echo_intensity": 0.4,
+    "notebook_entry": "This is not the original pattern. A trace of something recorded too early.",
+    "visual": "Faded, lighter ink, slightly blurred text"
+  },
+
+  "series_structure": {
+    "arc1_discovery": {
+      "books": ["Book 1: The First Glitch", "Book 2: The Notebook That Writes", "Book 3: The Hidden Symbols", "Book 4: The Corridor That Moves"],
+      "theme": "Learning how to see"
+    },
+    "arc2_understanding": {
+      "books": ["Book 5: The Missing Connections", "Book 6: The Broken Pattern", "Book 7: The Silent Zones", "Book 8: The Observer Effect"],
+      "theme": "Learning how reality works"
+    },
+    "arc3_perception": {
+      "books": ["Book 9: The Unseen Layer", "Book 10: The Memory Space", "Book 11: The Fractured System", "Book 12: Beyond This World"],
+      "theme": "Understanding the deeper system"
+    }
+  }
+}

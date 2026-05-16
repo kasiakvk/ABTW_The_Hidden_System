@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "characters": [
+    {
+      "id": "ASTRA",
+      "role": "Perceiver",
+      "stats_affinity": ["Awareness", "Timing"],
+      "color_palette": ["#1A2942","#2D3A6B","#5B4A8A","#C9A84C"],
+      "signature": "star_hair_clip",
+      "arc_start": "Something is wrong",
+      "arc_end": "Reality responds to perception"
+    },
+    {
+      "id": "LUMI",
+      "role": "Analyst",
+      "stats_affinity": ["Clarity", "Stability"],
+      "color_palette": ["#7EC8C8","#FFFFFF","#1A2942","#CCFFEE"],
+      "signature": "notebook",
+      "arc_start": "Everything can be understood",
+      "arc_end": "Understanding also requires emotional openness"
+    },
+    {
+      "id": "NELA",
+      "role": "Aligner",
+      "stats_affinity": ["Connection", "Timing"],
+      "color_palette": ["#C9A84C","#E8A050","#8B4A2A","#FFD080"],
+      "signature": "mismatched_earrings",
+      "arc_start": "Follow the feeling",
+      "arc_end": "Connection itself changes reality"
+    }
+  ]
+}

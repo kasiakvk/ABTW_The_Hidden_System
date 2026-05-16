@@ -1,235 +1,278 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Academy Beyond This World — The Hidden System: Part I</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- ═══════════════════════════════════════════════════════
-     TRANSITION OVERLAY
-════════════════════════════════════════════════════════ -->
+
+<!-- TRANSITION OVERLAY -->
 <div id="transition-overlay"></div>
-<!-- ═══════════════════════════════════════════════════════
-     SCREEN: TITLE
-════════════════════════════════════════════════════════ -->
-<div class="screen active" id="screen-title">
-<div class="stars-bg" id="title-stars"></div>
-<div class="title-content">
-<div class="title-label">Academy Beyond This World</div>
-<div class="title-main">The Hidden System</div>
-<div class="title-part">Part I</div>
-<div class="title-quote">"Reality is not fixed.<br/>It responds to how you see it."</div>
-<button class="btn-start" onclick="startGame()">Begin</button>
-<div class="title-hint">A Perception Mystery</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TITLE SCREEN
+══════════════════════════════════════════════════════ -->
+<div id="screen-title" class="screen active">
+  <div class="stars-bg" id="title-stars"></div>
+
+  <!-- Academy logo top -->
+  <div class="title-logo-wrap">
+    <img src="img/logo.png" alt="Academy Beyond This World" class="title-logo">
+  </div>
+
+  <div class="title-content">
+    <div class="title-label">Academy Beyond This World</div>
+    <div class="title-main">The Hidden System</div>
+    <div class="title-part">Part I</div>
+    <div class="title-divider"></div>
+    <div class="title-quote">"Reality is not fixed.<br>It responds to how you see it."</div>
+    <button class="btn-start" onclick="startGame()">Begin</button>
+    <div class="title-hint">A Perception Mystery · 3 Scenes · 9 Anomalies</div>
+  </div>
+
+  <!-- Astra silhouette bottom -->
+  <div class="title-astra-wrap">
+    <img src="img/astra.jpg" alt="Astra" class="title-astra">
+    <div class="title-astra-fade"></div>
+  </div>
 </div>
-</div>
-<!-- ═══════════════════════════════════════════════════════
-     SCREEN: GAME
-════════════════════════════════════════════════════════ -->
-<div class="screen" id="screen-game">
-<!-- TOP BAR -->
-<div id="topbar">
-<div id="scene-name">—</div>
-<div id="perception-bar-wrap">
-<div id="perception-label">PERCEPTION</div>
-<div id="perception-bar">
-<div id="perception-fill"></div>
-</div>
-</div>
-<div id="found-counter"></div>
-</div>
-<!-- SCENE AREA -->
-<div id="scene-area">
-<!-- SCENE INTRO CARD -->
-<div id="scene-intro">
-<div id="scene-intro-number"></div>
-<div id="scene-intro-title"></div>
-<div id="scene-intro-desc"></div>
-<button class="btn-intro-dismiss" onclick="Game.dismissSceneIntro()">Enter</button>
-</div>
-<!-- ── SCENE 1: CORRIDOR ── -->
-<div class="scene" id="scene-corridor">
-<svg id="corridor-svg" preserveaspectratio="xMidYMid slice" viewbox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialgradient cx="50%" cy="45%" id="corridorBg" r="70%">
-<stop offset="0%" stop-color="#0f1525"></stop>
-<stop offset="100%" stop-color="#060910"></stop>
-</radialgradient>
-<radialgradient cx="50%" cy="0%" id="floorGlow" r="100%">
-<stop offset="0%" stop-color="rgba(201,168,76,0.08)"></stop>
-<stop offset="100%" stop-color="rgba(201,168,76,0)"></stop>
-</radialgradient>
-<radialgradient cx="50%" cy="100%" id="ceilingGlow" r="100%">
-<stop offset="0%" stop-color="rgba(201,168,76,0.06)"></stop>
-<stop offset="100%" stop-color="rgba(201,168,76,0)"></stop>
-</radialgradient>
-<filter id="glow-gold">
-<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
-<femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
-</filter>
-<filter id="glow-violet">
-<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
-<femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
-</filter>
-<filter id="blur-soft">
-<fegaussianblur stddeviation="2"></fegaussianblur>
-</filter>
-</defs>
-<!-- Background -->
-<rect fill="url(#corridorBg)" height="560" width="900"></rect>
-<!-- Corridor perspective lines -->
-<polygon fill="#080c18" points="450,180 0,560 0,0"></polygon>
-<polygon fill="#080c18" points="450,180 900,0 900,560"></polygon>
-<polygon fill="#0a0e1c" points="450,180 0,0 900,0"></polygon>
-<polygon fill="#060910" points="450,180 0,560 900,560"></polygon>
-<!-- Floor glow -->
-<rect fill="url(#floorGlow)" height="180" width="900" x="0" y="380"></rect>
-<!-- Corridor walls — left panels -->
-<line stroke="rgba(201,168,76,0.12)" stroke-width="1" x1="450" x2="0" y1="180" y2="0"></line>
-<line stroke="rgba(201,168,76,0.12)" stroke-width="1" x1="450" x2="0" y1="180" y2="560"></line>
-<line stroke="rgba(201,168,76,0.07)" stroke-width="1" x1="450" x2="120" y1="180" y2="0"></line>
-<line stroke="rgba(201,168,76,0.07)" stroke-width="1" x1="450" x2="120" y1="180" y2="560"></line>
-<line stroke="rgba(201,168,76,0.05)" stroke-width="1" x1="450" x2="240" y1="180" y2="0"></line>
-<line stroke="rgba(201,168,76,0.05)" stroke-width="1" x1="450" x2="240" y1="180" y2="560"></line>
-<!-- Corridor walls — right panels -->
-<line stroke="rgba(201,168,76,0.12)" stroke-width="1" x1="450" x2="900" y1="180" y2="0"></line>
-<line stroke="rgba(201,168,76,0.12)" stroke-width="1" x1="450" x2="900" y1="180" y2="560"></line>
-<line stroke="rgba(201,168,76,0.07)" stroke-width="1" x1="450" x2="780" y1="180" y2="0"></line>
-<line stroke="rgba(201,168,76,0.07)" stroke-width="1" x1="450" x2="780" y1="180" y2="560"></line>
-<line stroke="rgba(201,168,76,0.05)" stroke-width="1" x1="450" x2="660" y1="180" y2="0"></line>
-<line stroke="rgba(201,168,76,0.05)" stroke-width="1" x1="450" x2="660" y1="180" y2="560"></line>
-<!-- Vanishing point glow -->
-<circle cx="450" cy="180" fill="rgba(201,168,76,0.04)" r="80"></circle>
-<circle cx="450" cy="180" fill="rgba(201,168,76,0.06)" r="40"></circle>
-<circle cx="450" cy="180" fill="rgba(201,168,76,0.1)" r="15"></circle>
-<!-- Floor tiles -->
-<line stroke="rgba(201,168,76,0.1)" stroke-width="1" x1="0" x2="900" y1="560" y2="560"></line>
-<line stroke="rgba(201,168,76,0.06)" stroke-width="1" x1="0" x2="900" y1="480" y2="480"></line>
-<line stroke="rgba(201,168,76,0.04)" stroke-width="1" x1="0" x2="900" y1="420" y2="420"></line>
-<!-- Wall sconces left -->
-<g filter="url(#glow-gold)">
-<rect fill="#0d1228" height="30" stroke="rgba(201,168,76,0.4)" stroke-width="1" width="18" x="55" y="200"></rect>
-<ellipse cx="64" cy="198" fill="rgba(201,168,76,0.5)" rx="12" ry="5"></ellipse>
-<circle cx="64" cy="192" fill="rgba(201,168,76,0.15)" r="8"></circle>
-</g>
-<g filter="url(#glow-gold)">
-<rect fill="#0d1228" height="24" stroke="rgba(201,168,76,0.3)" stroke-width="1" width="14" x="175" y="220"></rect>
-<ellipse cx="182" cy="218" fill="rgba(201,168,76,0.4)" rx="9" ry="4"></ellipse>
-</g>
-<!-- Wall sconces right -->
-<g filter="url(#glow-gold)">
-<rect fill="#0d1228" height="30" stroke="rgba(201,168,76,0.4)" stroke-width="1" width="18" x="827" y="200"></rect>
-<ellipse cx="836" cy="198" fill="rgba(201,168,76,0.5)" rx="12" ry="5"></ellipse>
-<circle cx="836" cy="192" fill="rgba(201,168,76,0.15)" r="8"></circle>
-</g>
-<g filter="url(#glow-gold)">
-<rect fill="#0d1228" height="24" stroke="rgba(201,168,76,0.3)" stroke-width="1" width="14" x="711" y="220"></rect>
-<ellipse cx="718" cy="218" fill="rgba(201,168,76,0.4)" rx="9" ry="4"></ellipse>
-</g>
-<!-- Ceiling arch -->
-<path d="M 0,0 Q 450,-40 900,0" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1.5"></path>
-<path d="M 60,0 Q 450,60 840,0" fill="none" stroke="rgba(201,168,76,0.08)" stroke-width="1"></path>
-<!-- Ceiling glow -->
-<rect fill="url(#ceilingGlow)" height="200" width="900" x="0" y="0"></rect>
-<!-- ── ANOMALY 1: DELAYED SHADOW ── -->
-<g id="delayed-shadow" onclick="Game.clickShadow()" style="opacity:0;cursor:pointer;transition:opacity 0.8s ease;">
-<!-- Shadow of figure that doesn't match anyone present -->
-<ellipse cx="280" cy="490" fill="rgba(80,50,150,0.5)" filter="url(#blur-soft)" rx="35" ry="12"></ellipse>
-<path d="M 280,490 L 265,380 L 275,370 L 285,380 L 295,370 L 305,380 L 295,490 Z" fill="rgba(80,50,150,0.35)" filter="url(#blur-soft)"></path>
-<!-- Head shadow -->
-<ellipse cx="280" cy="365" fill="rgba(80,50,150,0.3)" filter="url(#blur-soft)" rx="18" ry="20"></ellipse>
-<!-- Perception glow ring -->
-<ellipse cx="280" cy="430" fill="none" rx="45" ry="70" stroke="rgba(123,79,255,0.4)" stroke-dasharray="6,4" stroke-width="1.5"></ellipse>
-<text fill="rgba(123,79,255,0.7)" font-family="Cinzel,serif" font-size="9" letter-spacing="2" text-anchor="middle" x="280" y="340">ANOMALY</text>
-</g>
-<!-- ── ANOMALY 2: WALL SYMBOL ── -->
-<g id="wall-symbol" onclick="Game.clickSymbol()" style="opacity:0;cursor:pointer;transition:opacity 0.8s ease;">
-<!-- Symbol on left wall -->
-<circle cx="130" cy="300" fill="none" r="28" stroke="rgba(123,79,255,0.6)" stroke-width="1.5"></circle>
-<circle cx="130" cy="300" fill="none" r="18" stroke="rgba(123,79,255,0.4)" stroke-width="1"></circle>
-<line stroke="rgba(123,79,255,0.5)" stroke-width="1" x1="130" x2="130" y1="272" y2="328"></line>
-<line stroke="rgba(123,79,255,0.5)" stroke-width="1" x1="102" x2="158" y1="300" y2="300"></line>
-<line stroke="rgba(123,79,255,0.3)" stroke-width="1" x1="110" x2="150" y1="280" y2="320"></line>
-<line stroke="rgba(123,79,255,0.3)" stroke-width="1" x1="150" x2="110" y1="280" y2="320"></line>
-<!-- Glow -->
-<circle cx="130" cy="300" fill="rgba(123,79,255,0.08)" filter="url(#blur-soft)" r="40"></circle>
-<text fill="rgba(123,79,255,0.6)" font-family="Cinzel,serif" font-size="8" letter-spacing="2" text-anchor="middle" x="130" y="345">SYMBOL</text>
-</g>
-<!-- ── ANOMALY 3: LIGHT FLICKER ── -->
-<g id="light-flicker" onclick="Game.clickLight()" style="opacity:0;cursor:pointer;transition:opacity 0.8s ease;">
-<!-- Ceiling light that flickers wrong colour -->
-<ellipse cx="450" cy="30" fill="rgba(123,79,255,0.3)" rx="30" ry="12"></ellipse>
-<line filter="url(#blur-soft)" stroke="rgba(123,79,255,0.15)" stroke-linecap="round" stroke-width="40" x1="450" x2="450" y1="42" y2="180"></line>
-<line stroke="rgba(123,79,255,0.25)" stroke-linecap="round" stroke-width="15" x1="450" x2="450" y1="42" y2="180"></line>
-<ellipse cx="450" cy="30" fill="rgba(123,79,255,0.6)" rx="20" ry="8"></ellipse>
-<circle cx="450" cy="25" fill="rgba(200,180,255,0.9)" r="6"></circle>
-<text fill="rgba(123,79,255,0.6)" font-family="Cinzel,serif" font-size="8" letter-spacing="2" text-anchor="middle" x="450" y="200">LIGHT ANOMALY</text>
-</g>
-<!-- Astra figure (always visible) -->
-<g id="astra-figure">
-<!-- Body -->
-<ellipse cx="450" cy="490" fill="rgba(0,0,0,0.4)" rx="22" ry="8"></ellipse>
-<rect fill="#1a2040" height="85" rx="4" width="24" x="438" y="400"></rect>
-<!-- Head -->
-<circle cx="450" cy="390" fill="#1a1a2e" r="18"></circle>
-<!-- Hair -->
-<path d="M 432,385 Q 435,370 450,368 Q 465,370 468,385" fill="#0d0d1a"></path>
-<!-- Eyes -->
-<ellipse cx="444" cy="390" fill="#c9a84c" rx="4" ry="3"></ellipse>
-<ellipse cx="456" cy="390" fill="#c9a84c" rx="4" ry="3"></ellipse>
-<circle cx="444" cy="390" fill="#0a0a14" r="2"></circle>
-<circle cx="456" cy="390" fill="#0a0a14" r="2"></circle>
-<!-- Uniform detail -->
-<line stroke="rgba(201,168,76,0.3)" stroke-width="1" x1="450" x2="450" y1="410" y2="460"></line>
-</g>
-</svg>
-</div><!-- end scene-corridor -->
-<!-- ── SCENE 2: ARCHIVE ── -->
-<div class="scene" id="scene-archive">
-<canvas id="archive-canvas" onclick="Game.handleArchiveClick(event)"></canvas>
-</div>
-<!-- ── SCENE 3: OBSERVATORY ── -->
-<div class="scene" id="scene-observatory">
-<canvas id="obs-canvas" onclick="Game.handleObservatoryClick(event)"></canvas>
-</div>
-</div><!-- end scene-area -->
-<!-- BOTTOM UI -->
-<div id="bottom-ui">
-<!-- Dialogue Box -->
-<div id="dialogue-box" onclick="Game.advanceDialogue()">
-<div id="dialogue-speaker"></div>
-<div id="dialogue-text"></div>
-<div id="dialogue-continue">▼ continue</div>
-</div>
-<!-- Choices -->
-<div id="choices"></div>
-<!-- Controls -->
-<div id="controls">
-<button id="perception-btn" onclick="Game.togglePerception()" title="Toggle Perception Mode">
-<span class="eye-icon">◉</span>
-<span>Perception</span>
-</button>
-<div id="hint"></div>
-</div>
-</div><!-- end bottom-ui -->
-<!-- Notification -->
-<div id="notification"></div>
+
+<!-- ══════════════════════════════════════════════════════
+     GAME SCREEN
+══════════════════════════════════════════════════════ -->
+<div id="screen-game" class="screen">
+
+  <!-- TOP BAR -->
+  <div id="topbar">
+    <div id="scene-name">—</div>
+    <div id="perception-bar-wrap">
+      <div id="perception-label">PERCEPTION</div>
+      <div id="perception-bar">
+        <div id="perception-fill"></div>
+      </div>
+    </div>
+    <div id="found-counter"></div>
+  </div>
+
+  <!-- SCENE AREA -->
+  <div id="scene-area">
+
+    <!-- SCENE INTRO CARD -->
+    <div id="scene-intro">
+      <div id="scene-intro-number"></div>
+      <div id="scene-intro-title"></div>
+      <div id="scene-intro-desc"></div>
+      <button class="btn-intro-dismiss" onclick="Game.dismissSceneIntro()">Enter</button>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         SCENE 1: THE CORRIDOR
+    ════════════════════════════════════════ -->
+    <div id="scene-corridor" class="scene">
+
+      <!-- Real photo background -->
+      <div class="scene-bg" style="background-image:url('img/corridor.jpg')"></div>
+      <div class="perception-vignette"></div>
+      <div class="perception-scan"></div>
+
+      <!-- ANOMALY 1: Shadow that doesn't move -->
+      <div id="shadow-overlay"
+           class="anomaly-hotspot"
+           onclick="Game.clickShadow()"
+           style="bottom:12%;left:18%;width:160px;height:260px;">
+        <svg width="100%" height="100%" viewBox="0 0 160 260" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shadow shape -->
+          <ellipse cx="80" cy="248" rx="40" ry="12" fill="rgba(80,40,160,0.45)"/>
+          <path d="M 80,248 L 62,140 L 72,128 L 80,138 L 88,128 L 98,140 L 98,248 Z"
+                fill="rgba(80,40,160,0.35)"/>
+          <ellipse cx="80" cy="122" rx="22" ry="26" fill="rgba(80,40,160,0.3)"/>
+          <!-- Perception ring -->
+          <ellipse cx="80" cy="185" rx="55" ry="80" fill="none"
+                   stroke="rgba(123,79,255,0.5)" stroke-width="1.5" stroke-dasharray="6,4"/>
+          <ellipse cx="80" cy="185" rx="45" ry="65" fill="none"
+                   stroke="rgba(123,79,255,0.25)" stroke-width="1" stroke-dasharray="3,6"/>
+          <!-- Label -->
+          <text x="80" y="100" text-anchor="middle"
+                font-family="Cinzel,serif" font-size="8" fill="rgba(123,79,255,0.8)"
+                letter-spacing="2">ANOMALY</text>
+          <text x="80" y="112" text-anchor="middle"
+                font-family="Cinzel,serif" font-size="7" fill="rgba(123,79,255,0.5)"
+                letter-spacing="1">SHADOW</text>
+        </svg>
+      </div>
+
+      <!-- ANOMALY 2: Wall symbol -->
+      <div id="symbol-overlay"
+           class="anomaly-hotspot"
+           onclick="Game.clickSymbol()"
+           style="top:28%;left:4%;width:130px;height:130px;">
+        <svg width="100%" height="100%" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer glow -->
+          <circle cx="65" cy="65" r="55" fill="rgba(123,79,255,0.06)"/>
+          <!-- Symbol rings -->
+          <circle cx="65" cy="65" r="38" fill="none"
+                  stroke="rgba(123,79,255,0.7)" stroke-width="1.5"/>
+          <circle cx="65" cy="65" r="24" fill="none"
+                  stroke="rgba(123,79,255,0.5)" stroke-width="1"/>
+          <circle cx="65" cy="65" r="10" fill="rgba(123,79,255,0.2)"
+                  stroke="rgba(123,79,255,0.6)" stroke-width="1"/>
+          <!-- 8 radial lines -->
+          <line x1="65" y1="27" x2="65" y2="103" stroke="rgba(123,79,255,0.45)" stroke-width="1"/>
+          <line x1="27" y1="65" x2="103" y2="65" stroke="rgba(123,79,255,0.45)" stroke-width="1"/>
+          <line x1="38" y1="38" x2="92" y2="92" stroke="rgba(123,79,255,0.3)" stroke-width="1"/>
+          <line x1="92" y1="38" x2="38" y2="92" stroke="rgba(123,79,255,0.3)" stroke-width="1"/>
+          <!-- Pulse ring (animated) -->
+          <circle cx="65" cy="65" r="38" fill="none"
+                  stroke="rgba(123,79,255,0.3)" stroke-width="2"
+                  class="pulse-ring"/>
+          <!-- Label -->
+          <text x="65" y="118" text-anchor="middle"
+                font-family="Cinzel,serif" font-size="7" fill="rgba(123,79,255,0.7)"
+                letter-spacing="2">SYMBOL</text>
+        </svg>
+      </div>
+
+      <!-- ANOMALY 3: Light flicker -->
+      <div id="light-overlay"
+           class="anomaly-hotspot"
+           onclick="Game.clickLight()"
+           style="top:0;left:50%;transform:translateX(-50%);width:220px;height:55%;">
+        <svg width="100%" height="100%" viewBox="0 0 220 400" xmlns="http://www.w3.org/2000/svg"
+             preserveAspectRatio="xMidYMin meet">
+          <!-- Light beam -->
+          <defs>
+            <linearGradient id="lightBeam" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(123,79,255,0.5)"/>
+              <stop offset="100%" stop-color="rgba(123,79,255,0)"/>
+            </linearGradient>
+          </defs>
+          <polygon points="110,0 60,400 160,400" fill="url(#lightBeam)"/>
+          <polygon points="110,0 80,400 140,400" fill="rgba(123,79,255,0.15)"/>
+          <!-- Source glow -->
+          <ellipse cx="110" cy="8" rx="28" ry="10" fill="rgba(123,79,255,0.5)"/>
+          <ellipse cx="110" cy="6" rx="16" ry="7" fill="rgba(200,180,255,0.7)"/>
+          <circle cx="110" cy="4" r="6" fill="rgba(255,255,255,0.9)"/>
+          <!-- Label -->
+          <text x="110" y="30" text-anchor="middle"
+                font-family="Cinzel,serif" font-size="7" fill="rgba(123,79,255,0.7)"
+                letter-spacing="2">LIGHT ANOMALY</text>
+        </svg>
+      </div>
+
+    </div><!-- end scene-corridor -->
+
+    <!-- ════════════════════════════════════════
+         SCENE 2: THE ARCHIVE DOOR
+    ════════════════════════════════════════ -->
+    <div id="scene-archive" class="scene">
+      <!-- Real photo background -->
+      <div class="scene-bg" style="background-image:url('img/archive.jpg')"></div>
+      <div class="perception-vignette"></div>
+      <div class="perception-scan"></div>
+      <!-- Canvas overlay for drawn anomalies -->
+      <canvas id="archive-canvas"
+              onclick="Game.handleArchiveClick(event)"
+              style="position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;background:transparent;"></canvas>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         SCENE 3: THE OBSERVATORY
+    ════════════════════════════════════════ -->
+    <div id="scene-observatory" class="scene">
+      <!-- Real photo background -->
+      <div class="scene-bg" style="background-image:url('img/observatory.jpg')"></div>
+      <div class="perception-vignette"></div>
+      <div class="perception-scan"></div>
+      <!-- Canvas overlay for star anomalies -->
+      <canvas id="obs-canvas"
+              onclick="Game.handleObservatoryClick(event)"
+              style="position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;background:transparent;"></canvas>
+    </div>
+
+  </div><!-- end scene-area -->
+
+  <!-- BOTTOM UI -->
+  <div id="bottom-ui">
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box" onclick="Game.advanceDialogue()">
+      <div id="dialogue-speaker"></div>
+      <div id="dialogue-text"></div>
+      <div id="dialogue-continue">▼ continue</div>
+    </div>
+
+    <!-- Choices -->
+    <div id="choices"></div>
+
+    <!-- Controls -->
+    <div id="controls">
+      <button id="perception-btn" onclick="Game.togglePerception()" title="Toggle Perception Mode">
+        <span class="eye-icon">◉</span>
+        <span>Perception Mode</span>
+      </button>
+      <div id="hint"></div>
+    </div>
+
+  </div><!-- end bottom-ui -->
+
+  <!-- Notification -->
+  <div id="notification"></div>
+
 </div><!-- end screen-game -->
-<!-- ═══════════════════════════════════════════════════════
-     SCREEN: END
-════════════════════════════════════════════════════════ -->
-<div class="screen" id="screen-end"></div>
+
+<!-- ══════════════════════════════════════════════════════
+     END SCREEN
+══════════════════════════════════════════════════════ -->
+<div id="screen-end" class="screen"></div>
+
 <script src="scenes.js"></script>
 <script src="game.js"></script>
 <script>
   function startGame() { Game.start(); }
   window.addEventListener('load', () => Game.init());
 </script>
+
+<style>
+/* ── Extra title screen styles ── */
+.title-logo-wrap {
+  position: absolute; top: 32px; left: 50%; transform: translateX(-50%);
+  z-index: 3;
+}
+.title-logo {
+  height: 64px; width: auto; opacity: 0.85;
+  filter: drop-shadow(0 0 20px rgba(201,168,76,0.4));
+}
+.title-content { position: relative; z-index: 2; }
+.title-divider {
+  width: 80px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 4px auto;
+}
+.title-astra-wrap {
+  position: absolute; bottom: 0; right: 8%;
+  width: 220px; height: 380px;
+  z-index: 1; overflow: hidden;
+}
+.title-astra {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  opacity: 0.35;
+  filter: saturate(0.3) brightness(0.7);
+}
+.title-astra-fade {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--navy) 0%, transparent 50%, var(--navy) 100%),
+              linear-gradient(to right, transparent 60%, var(--navy) 100%);
+}
+
+/* ── Anomaly hotspot hover ── */
+.anomaly-hotspot { transition: filter 0.3s ease; }
+.anomaly-hotspot:hover { filter: brightness(1.3); }
+.anomaly-hotspot.found { opacity: 0.2 !important; pointer-events: none; }
+</style>
 </body>
 </html>

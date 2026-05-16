@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "canon_lock": true,
+  "golden_rule": "Symbols never fully explain themselves. They respond to perception.",
+  "symbol_states": ["Hidden","Glitch","Forming","Activation","Responding","Deepening","Consequence"],
+  "symbols": [
+    {
+      "id": "SYM_001",
+      "name": "The Delayed Shadow",
+      "category": "Layer1_Anomaly",
+      "location": "East Corridor",
+      "appears_in_book": 1,
+      "trio_required": false,
+      "hidden_layer": false,
+      "color_glitch": "#6666CC",
+      "color_activation": "#FFD700",
+      "lumi_note": "It's repeating. The interval is consistent.",
+      "nela_note": "Don't write it yet. Something else is coming."
+    },
+    {
+      "id": "SYM_002",
+      "name": "The Incomplete Circle",
+      "category": "Layer2_Symbol",
+      "location": "Observatory",
+      "appears_in_book": 1,
+      "trio_required": true,
+      "hidden_layer": true,
+      "color_glitch": "#4488FF",
+      "color_activation": "#FFFACD",
+      "lumi_note": "The gap rotates by 15 degrees each observation.",
+      "nela_note": "It's waiting for the right moment to close."
+    },
+    {
+      "id": "SYM_003",
+      "name": "The Reflected Word",
+      "category": "Layer1_Anomaly",
+      "location": "Library Archive",
+      "appears_in_book": 2,
+      "trio_required": false,
+      "hidden_layer": false,
+      "color_glitch": "#8866AA",
+      "color_activation": "#E8D5FF",
+      "lumi_note": "The reflection shows a different language.",
+      "nela_note": "Read it when you're not trying to."
+    }
+  ]
+}
