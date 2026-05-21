@@ -28,8 +28,10 @@ function Write-PipelineFile($relativePath, $content) {
 Write-Host "`n🌌 ABTW Python Pipeline Generator" -ForegroundColor Cyan
 Write-Host "Target: $ProjectRoot" -ForegroundColor Yellow
 
-# ── abtw_pipeline_connector.py ───────────────────────────────
-Write-PipelineFile "pipeline\abtw_pipeline_connector.py" @"
+# ── abtw_pipeline_connector.py ──────────────────────────────────────────────
+# NOTE: Single-quoted here-string (@'...'@) is used so that Python triple-quotes
+#       (""") and dollar signs inside the Python code are NOT interpreted by PowerShell.
+Write-PipelineFile "pipeline\abtw_pipeline_connector.py" @'
 """
 ABTW: The Hidden System — Pipeline Connector
 Connects Unity project data with Graph App via REST API
@@ -44,7 +46,7 @@ import requests
 from pathlib import Path
 from datetime import datetime
 
-# ── Configuration ─────────────────────────────────────────────
+# ── Configuration ─────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_PATH    = PROJECT_ROOT / "Assets" / "ABTW" / "Data"
 EXPORT_PATH  = PROJECT_ROOT / "pipeline" / "exports"
@@ -53,7 +55,7 @@ CONFIG_FILE  = DATA_PATH / "World" / "pipeline_config.yaml"
 
 GRAPH_APP_ENDPOINT = "http://localhost:5000/api/abtw"
 
-# ── Logging Setup ─────────────────────────────────────────────
+# ── Logging Setup ─────────────────────────────────────────────────────────────
 LOG_PATH.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
@@ -66,7 +68,7 @@ logging.basicConfig(
 log = logging.getLogger("ABTW_Pipeline")
 
 
-# ── Data Loaders ──────────────────────────────────────────────
+# ── Data Loaders ──────────────────────────────────────────────────────────────
 def load_json(path: Path) -> dict:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -82,7 +84,7 @@ def save_json(path: Path, data: dict):
     log.info(f"Saved: {path}")
 
 
-# ── World State Exporter ──────────────────────────────────────
+# ── World State Exporter ──────────────────────────────────────────────────────
 def export_world_state() -> dict:
     world_state  = load_json(DATA_PATH / "World"    / "world_states.json")
     player_stats = load_json(DATA_PATH / "Stats"    / "player_stats_default.json")
@@ -103,7 +105,7 @@ def export_world_state() -> dict:
     return payload
 
 
-# ── Graph App Sender ──────────────────────────────────────────
+# ── Graph App Sender ──────────────────────────────────────────────────────────
 def send_to_graph_app(payload: dict) -> bool:
     try:
         response = requests.post(
@@ -126,7 +128,7 @@ def send_to_graph_app(payload: dict) -> bool:
         return False
 
 
-# ── Anomaly State Sync ────────────────────────────────────────
+# ── Anomaly State Sync ────────────────────────────────────────────────────────
 def sync_anomaly_states():
     spawn_table = load_json(DATA_PATH / "Patterns" / "spawn_table.json")
     world_state = load_json(DATA_PATH / "World"    / "world_states.json")
@@ -148,7 +150,7 @@ def sync_anomaly_states():
     return report
 
 
-# ── Main Pipeline Run ─────────────────────────────────────────
+# ── Main Pipeline Run ─────────────────────────────────────────────────────────
 def run_pipeline():
     log.info("=== ABTW Pipeline Starting ===")
     EXPORT_PATH.mkdir(parents=True, exist_ok=True)
@@ -162,10 +164,10 @@ def run_pipeline():
 
 if __name__ == "__main__":
     run_pipeline()
-"@
+'@
 
-# ── abtw_asset_validator.py ───────────────────────────────────
-Write-PipelineFile "pipeline\abtw_asset_validator.py" @"
+# ── abtw_asset_validator.py ──────────────────────────────────────────────────
+Write-PipelineFile "pipeline\abtw_asset_validator.py" @'
 """
 ABTW: The Hidden System — Asset Validator
 Validates that all required C# scripts, JSON configs, and YAML files exist.
@@ -262,17 +264,17 @@ def validate():
 
 if __name__ == "__main__":
     validate()
-"@
+'@
 
-# ── requirements.txt ─────────────────────────────────────────
-Write-PipelineFile "pipeline\requirements.txt" @"
+# ── requirements.txt ──────────────────────────────────────────────────────────
+Write-PipelineFile "pipeline\requirements.txt" @'
 requests>=2.31.0
 pyyaml>=6.0
 pathlib
-"@
+'@
 
-# ── README_pipeline.md ────────────────────────────────────────
-Write-PipelineFile "pipeline\README_pipeline.md" @"
+# ── README_pipeline.md ────────────────────────────────────────────────────────
+Write-PipelineFile "pipeline\README_pipeline.md" @'
 # ABTW Pipeline — Quick Start
 
 ## Setup
@@ -295,7 +297,7 @@ All exports are saved to: `pipeline/exports/`
 
 ## Logs
 Pipeline logs: `pipeline/logs/pipeline.log`
-"@
+'@
 
 Write-Host "`n✅ Python pipeline files generated!" -ForegroundColor Green
 Write-Host "📁 Location: $ProjectRoot\pipeline\" -ForegroundColor Cyan

@@ -1,0 +1,18 @@
+# ABTW Pipeline Configuration
+# Connects Unity project with Python/Graph App pipeline
+
+pipeline:
+  version: "1.0"
+  project_root: "C:/ABTW_The_Hidden_System/ABTW_The_Hidden_System"
+  data_output: "Assets/ABTW/Data"
+  python_connector: "pipeline/abtw_pipeline_connector.py"
+  graph_app_endpoint: "http://localhost:5000/api/abtw"
+
+export:
+  formats: ["json", "yaml"]
+  auto_export_on_save: true
+  export_path: "pipeline/exports"
+
+logging:
+  level: "INFO"
+  log_file: "pipeline/logs/pipeline.log"
